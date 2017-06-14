@@ -1,0 +1,64 @@
+div
+{
+    font-size: 12px;
+}
+
+div.digg
+{
+    padding: 3px;
+    margin: 5px;
+    text-align: right;
+    font-family: Verdana;
+    font-size: 12px;
+    clear:both;
+    line-height:13px;
+}
+div.digg a
+{
+    border: #E5E5E5 1px solid;
+    padding: 8px 10px;
+    margin: 2px;
+    color: #666;
+    text-decoration: none;
+}
+div.digg a:hover
+{
+    background:#E74C3C;
+    color:#fff;
+    border:1px solid #E74C3C;
+}
+div.digg a:active
+{
+    border: #000099 1px solid;
+    color: #000;
+}
+div.digg span.current
+{
+    padding: 8px 10px;
+    font-weight: bold;
+    margin: 2px;
+    color: #fff;
+    background-color: #E74C3C;
+}
+div.digg span.disabled
+{
+    border: #eee 1px solid;
+    padding:8px 10px;
+    margin: 2px;
+    color: #ddd;
+}
+div.digg span input
+{
+    border: 1px solid #ddd;
+    color: #7F7F7F;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 38px;
+}
+div.digg span button
+{
+    font-family: arial,verdana,sans-serif;
+    height: 32px;
+    cursor: pointer;
+}

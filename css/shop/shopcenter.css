@@ -1,0 +1,271 @@
+.map-icon {
+    display: inline-block;
+    background: url(../../images/shopicon.png) no-repeat;
+    background-position: 0 0;
+    width: 26px;
+    height: 31px;
+    vertical-align: middle;
+}
+.plus-icon {
+    display: inline-block;
+    background: url(../../images/shopicon.png) no-repeat;
+    background-position: -26px 0;
+    width: 33px;
+    height: 26px;
+    vertical-align: middle;
+}
+.check-icon {
+    display: inline-block;
+    background: url(../../images/shopicon.png) no-repeat;
+    background-position: 0 -34px;
+    width: 23px;
+    height: 22px;
+    vertical-align: middle;
+}
+.none-icon {
+    display: inline-block;
+    background: url(../../images/none.png) no-repeat;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+.sb-icon {
+    display: inline-block;
+    background: url(../../images/sb_icon.png) no-repeat;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.shop-left
+{
+    float: left;
+    min-height: 500px;
+    width: 180px;
+    background-color: #EEEEEE;
+    border-top: none;
+    border-right:none;
+    height:100%;
+    color: #333;
+}
+.item-title
+{
+    /* background: url("images/t2_bj.gif") repeat-x scroll 0 0; */
+    border-top: 1px dotted #DED6D6;
+    /*height: 32px;*/
+    margin-bottom: 3px;
+    margin: 0 10px;
+}
+.item-title h3
+{
+    /* background: url("images/h3_bj.gif") no-repeat scroll left center; */
+    font-size: 12px;
+    line-height: 32px;
+    margin-left: 15px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    /* text-indent: 20px; */
+}
+.shop-left ul
+{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.shop-left ul .select
+{
+    background-color: #e45050;
+    color: #ffffff;
+}
+.shop-left li
+{
+    line-height:30px;
+    /*text-indent: 34px;*/
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left:34px;
+}
+.shop-left ul .hover
+{
+    background-color: #e45050;
+    cursor: pointer;
+}
+.shop-left ul .hover a
+{
+    text-decoration: underline;
+    color:#fff;
+}
+.shop-left li a
+{
+    text-decoration: none;
+    color: #333;
+    display:block;
+}
+
+
+
+.shop-right
+{
+    float: left;
+    margin-bottom: 50px;
+    padding: 10px;
+    background:#fff;
+    width: 996px;
+    height:100%;
+}
+
+/*新修改新添加指引*/
+.merchant_navigation_box {
+    display:none;
+    width:100%;
+    height:100%;
+    z-index:1000000;
+    position:fixed;
+    left:0;
+    top:0;
+}
+.merchant_navigation_box .merchant_navigation_box_1 {
+    width:1200px;
+    height:100%;
+    position:absolute;
+    left:50%;
+    top:60px;
+    margin-left:-600px;  
+}
+.merchant_navigation_box .merchant_navigation_box_1_bg {
+    background-color:#000;
+    opacity:0.5;
+    filter:alpha(Opacity=50);
+    width:100%;
+    height:100%;
+}
+.merchant_navigation_box .merchant_navigation_box_1 .merchant_navigation_box_1_1 {
+        position:absolute;
+        left:0;
+        top:0;
+        width:180px;
+        height:737px;
+}
+.merchant_navigation_box .merchant_navigation_box_1 .merchant_navigation_box_1_2 {
+        position:absolute;
+        left:220px;
+        top:80px;
+        width:840px;
+        height:633px;
+}
+.merchant_navigation_box .merchant_navigation_box_1 .merchant_navigation_box_1_3 {
+        position:absolute;
+        left:900px;
+        top:570px;
+        width:194px;
+        height:69px;
+}
+
+
+.merchant_navigation_box .merchant_navigation_box_2 {
+    width:1200px;
+    height:100%;
+    position:absolute;
+    left:50%;
+    top:60px;  
+    display:none;
+    margin-left:-600px;   
+}
+
+.merchant_navigation_box .merchant_navigation_box_2 .merchant_navigation_box_2_1 {
+        position:absolute;
+        left:0;
+        top:0;
+        width:180px;
+        height:737px;
+}
+.merchant_navigation_box .merchant_navigation_box_2 .merchant_navigation_box_2_2 {
+        position:absolute;
+        left:220px;
+        top:80px;
+        width:840px;
+        height:633px;
+}
+.merchant_navigation_box .merchant_navigation_box_2 .merchant_navigation_box_2_3 {
+        position:absolute;
+        left:900px;
+        top:570px;
+        width:194px;
+        height:69px;
+}
+
+.merchant_navigation_box .merchant_navigation_box_3 {
+    width:1200px;
+    height:100%;
+    position:absolute;
+    left:50%;
+    top:60px;  
+    display:none;
+    margin-left:-600px;  
+}
+.merchant_navigation_box .merchant_navigation_box_3 .merchant_navigation_box_3_1 {
+        position:absolute;
+        left:0;
+        top:0;
+        width:180px;
+        height:737px;
+}
+.merchant_navigation_box .merchant_navigation_box_3 .merchant_navigation_box_3_2 {
+        position:absolute;
+        left:220px;
+        top:80px;
+        width:829px;
+        height:420px;
+}
+.merchant_navigation_box .merchant_navigation_box_3 .merchant_navigation_box_3_3 {
+        position:absolute;
+        left:900px;
+        top:570px;
+        width:194px;
+        height:69px;
+}
+
+/* myaccount */
+.myaccount-tips{ width:500px; margin: 0 0 10px 70px; background:url(../../images/tan_icon.png) left no-repeat; padding-left: 25px;}
+.uppwd dl{line-height:30px;padding:3px 0 3px 0;}
+.uppwd dt{width: 160px;padding-right: 10px;float: left;text-align: right;color: #666;}
+.uppwd .Storesd_ddtime{width:134.5px;}
+.red{color: #ff0000;}
+.inp{border: 1px solid #C8C8C8;line-height: 26px;height: 26px;margin-right: 3px;padding: 2px 3px;font-size: 14px;}
+.btns{padding: 6px 20px 6px 20px;padding: 10px 18px 6px 18px; cursor: pointer;margin: 0;}
+em{ height:26px; line-height:26px;}
+.grade0,.grade1,.grade2,.grade3 { color:#ec2b8c;}
+.search-path-box{color: #000;font-size: 14px;}
+.search-path{ margin: 0 20px; }
+.search-path-box a{ color: #000;}
+.search-path-box .ss{ color: #999;}
+.search-path-box i{ margin: 0 6px;}
+.my-moneyInfor{background:#E6F0F4;margin:0 20px;padding:10px 20px;overflow:hidden;color:#333;font-family:"Microsoft Yahei"}
+.my-moneyInfor dl{float:left; min-width:400px;}
+.my-moneyInfor dt,.my-moneyInfor dd{float:left;}
+.my-moneyInfor strong{color:#ff5500;}
+.my-moneyInfor a{margin-left:10px;color:#0083d4}
+.xubox_botton3{background:#f05400 !important;}
+.xubox_botton2{background:#c5c5c5 !important;}
+.my-moneyInfor .clearfix span{color:red;}
+.my-moneyInfor .tt{ color: #333;font-size: 16px;font-weight: 700;vertical-align: middle;}
+.qrcode-main{ margin: 20px;}
+.qrcode-list{ width: 200px;border: 1px solid #ff5500;border-radius: 8px;text-align: center;overflow: hidden;}
+.qrcode-list .qrcode-img{ margin: 10px;}
+.qrcode-list .qrcode-img img{ width: 100%;}
+.qrcode-list .qrcode-tt{ line-height: 18px;padding: 10px 0;background: #ff5500;color: #fff;}
+
+/* changepasswork */
+.changpwd .uppwd dl {
+    padding-top: 18px;
+}
+.changpwd .uppwd dt {
+    width: 160px;
+    padding-right: 10px;
+    line-height: 2;
+    float: left;
+    text-align: right;
+    color: #666;
+}
+.changpwd em {
+    height: 26px;
+    line-height: 26px;
+}
