@@ -42,76 +42,75 @@
         </div>
     </div>
     <!--top end-->
-    
         
-        <div class="nav">
-            <div class="content">
-                <h1 class="clearfix" id="logo">
-                    <span class="mlogo"><a target="_top" title="#" href="/index.html"><s></s></a></span>
-                </h1>
-                <ul class="nav">
-                    <li><a href="index.html" title="首 页">首 页</a></li>
-                    <li><a href="list.html" title="图片管理">图片管理</a></li>
-                    <li><a href="Upload.html" title="上传图片">上传图片</a></li>
-                    <li><a href="Category.html" title="">图片分类</a></li>
-                    <li><a href="Recycle.html" title="">回收站</a></li>
-                </ul>
-            </div>
+    <div class="nav">
+        <div class="content">
+            <h1 class="clearfix" id="logo">
+                <span class="mlogo"><a target="_top" title="#" href="/index.html"><s></s></a></span>
+            </h1>
+            <ul class="nav">
+                <li><a href="index.html" title="首 页">首 页</a></li>
+                <li><a href="list.html" title="图片管理">图片管理</a></li>
+                <li><a href="Upload.html" title="上传图片">上传图片</a></li>
+                <li><a href="Category.html" title="">图片分类</a></li>
+                <li><a href="Recycle.html" title="">回收站</a></li>
+            </ul>
         </div>
-        <!--header end-->
-        <div class="page">
-            <div class="my-bgwhite">
-                <table id="J_main" class="table-head">
+    </div>
+    <!--header end-->
+    <div class="page">
+        <div class="my-bgwhite">
+            <table id="J_main" class="table-head">
+                <tbody>
+                    <tr>
+                        <td class="td-1">
+                                                                                 分类名称
+                        </td>
+                        <td class="td-3">
+                                                                                    上移
+                        </td>
+                        <td class="td-4">
+                                                                                     下移
+                        </td>
+                        <td class="td-5">
+                                                                                    删除
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-box  category-form" id="J_table_box" style="top: 154px; visibility: visible;">
+                <table style="display: none;" id="Category_Temp">
                     <tbody>
-                        <tr>
+                        <tr class="cats-sup">
                             <td class="td-1">
-                                                                                     分类名称
+                                <input type="text" class="text" value="" name="cat_names" maxlength="20" />
                             </td>
                             <td class="td-3">
-                                                                                        上移
+                                <a class="move-up no-move-up" onclick="move(this)" href="javascript:void(0);">上移</a>
                             </td>
                             <td class="td-4">
-                                                                                         下移
+                                <a class="move-down no-move-down" onclick="move(this)" href="javascript:void(0);">下移</a>
                             </td>
                             <td class="td-5">
-                                                                                        删除
+                                <a class="delete" href="javascript:void(0);" onclick="del(this)">删除</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="table-box  category-form" id="J_table_box" style="top: 154px; visibility: visible;">
-                    <table style="display: none;" id="Category_Temp">
-                        <tbody>
-                            <tr class="cats-sup">
-                                <td class="td-1">
-                                    <input type="text" class="text" value="" name="cat_names" maxlength="20" />
-                                </td>
-                                <td class="td-3">
-                                    <a class="move-up no-move-up" onclick="move(this)" href="javascript:void(0);">上移</a>
-                                </td>
-                                <td class="td-4">
-                                    <a class="move-down no-move-down" onclick="move(this)" href="javascript:void(0);">下移</a>
-                                </td>
-                                <td class="td-5">
-                                    <a class="delete" href="javascript:void(0);" onclick="del(this)">删除</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="cats-manager" id="Category"></table>
-                </div>
-                <div class="add-act">
-                    <button class="btn btn-ts btn-corOrange" onclick="save();" type="button">保存</button>
-                    <a class="btn btn-ts btn-tsLine btn-corYellow" href="javascript:void(0);" id="NewCategory">添加新分类</a><strong class="green"></strong>
-                </div>
+                <table class="cats-manager" id="Category"></table>
+            </div>
+            <div class="add-act">
+                <button class="btn btn-ts btn-corOrange" onclick="save();" type="button">保存</button>
+                <a class="btn btn-ts btn-tsLine btn-corYellow" href="javascript:void(0);" id="NewCategory">添加新分类</a><strong class="green"></strong>
             </div>
         </div>
-        
-        <div class="bottom">
-            <div class="content">
-                <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
-            </div>
+    </div>
+    
+    <div class="bottom">
+        <div class="content">
+            <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
         </div>
+    </div>
     <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
     <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
     </body>
