@@ -1,315 +1,311 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head id="Head1">
-        <title>店铺装修</title>
-        <script type="text/javascript" language="javascript">
-            var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
-        </script>
-        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
-        <link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css" />
-        <link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
-        <link href="../css/Product/GoodsProduct.css" rel="stylesheet" type="text/css" />
-        <link href="../css/Product/RecommendProduct.css" rel="stylesheet" type="text/css" />
-        <link href="../lib/pagination.css" rel="stylesheet" type="text/css" />
-        <link href="../css/shop/jquery.minicolors.css" rel="stylesheet" type="text/css" />
+<head id="Head1">
+<title>店铺装修</title>
+<script type="text/javascript" language="javascript">
+    var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
+</script>
+<link href="../lib/global.css" rel="stylesheet" type="text/css" />
+<link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="../lib/pagination.css" rel="stylesheet" type="text/css" />
+<link href="../css/Product/GoodsProduct.css" rel="stylesheet" type="text/css" />
+<link href="../css/Product/RecommendProduct.css" rel="stylesheet" type="text/css" />
+<link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css" />
+<link href="../css/shop/jquery.minicolors.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <!--top begin-->
+    <div class="top">
+        <div class="content">
+            <div class="fl my-headLogo">
+                <a href="/Shop/MyAccount.html">
+                    <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                </a>
+            </div>
+            <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+            <div class="my-headTopInfor">
+                <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                    &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                    <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+            </div>
     
-        <script>
-            $(function () {
-                var href = window.location.href
-                var index = href.indexOf('?');
-                if (index == -1) {
-                    index = href.length;
-                }
-                href = href.substring(0, index);
-    
-                if (href.indexOf("Order/DeliverGoods.html") != -1) {
-                    href = $("#SendOrder").attr("href");
-                }
-                href = href.replace("aspx", "html");
-                var oldhref = "";
-                $(".shop-left ul li a").each(function (i) {
-                    oldhref = $(this).attr("href");
-                    index = oldhref.indexOf('?');
-                    if (index == -1) {
-                        index = oldhref.length;
-                    }
-                    oldhref = oldhref.substring(0, index);
-                    if (oldhref == href) {
-                        $(this).parent().addClass("select");
-                        $(this).css("color", "#ffffff");
-                    }
-                });
-    
-                //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
-                //    if (data.status) {
-                //        var li = $("ul[name='shop']").find("li:eq(0)");
-                //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
-                //    }
-                //    $(".shop-left li").bind("mouseover", function () {
-                //        if ($(this).hasClass("select")) {
-                //            $(this).find("a").css("text-decoration", "underline");
-                //            return;
-                //        }
-                //        $(this).addClass("hover");
-    
-                //    });
-                //    $(".shop-left li").bind("mouseout", function () {
-                //        $(this).removeClass("hover");
-                //        $(this).find("a").css("text-decoration", "none");
-                //    });
-    
-                //}, "json");
-            });
-        </script>
-    </head>
-    <body>
-        <!--top begin-->
-        <div class="top">
-            <div class="content">
-                <div class="fl my-headLogo">
-                    <a href="/Shop/MyAccount.html">
-                        <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
-                    </a>
-                </div>
-                <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
-                <div class="my-headTopInfor">
-                    <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
-                        &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
-                        <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
-                </div>
-        
-                <div class="fr drops">
-                    <div class="dropdown">
-                        <a href="#" title="">Language <i class="icon-angle-down"></i></a>
-                        <div class="trancelate">
-                            <ul id="langs">
-                                <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
-                            </ul>
-                        </div>
+            <div class="fr drops">
+                <div class="dropdown">
+                    <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                    <div class="trancelate">
+                        <ul id="langs">
+                            <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!--top end-->
-        
-            <div class="page">
-                <div class="wrap">
-                    <div class="shop-left">
-                        <div class="item-title">
-                            <h3>交易管理</h3>
-                        </div>
-                        <ul>
-                            <li><a href="http://member.wdj360.com/Order/OrderList.html">已卖出商品</a></li>
-                            <li><a href="http://member.wdj360.com/Shop/MyAccount.html">我的账户</a></li>
-                            <li><a href="http://member.wdj360.com/Ret/ExchangeGood.html">换货管理</a></li>
-                            <li><a href="http://member.wdj360.com/Ret/ReturnGood.html">退货管理</a></li>
-                            <li><a href="http://member.wdj360.com/Ret/evaluate.html">评价管理</a></li>
-                        </ul>
-                        <div class="item-title">
-                            <h3>物流管理</h3>
-                        </div>
-                        <ul>
-                            <li><a id="SendOrder" href="http://member.wdj360.com/Order/WaitOrder.html">发货</a></li>
-                            <li><a href="http://member.wdj360.com/Freight/List.html">运费模板</a></li>
-                        </ul>
-                        <div class="item-title">
-                            <h3>商品管理</h3>
-                        </div>
-                        <ul>
-                            <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
-                            <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
-                            <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
-                            <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
-                            <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
-                           
-                        </ul>
-                        <div class="item-title">
-                            <h3>店铺管理</h3>
-                        </div>
-                        <ul name="shop">
-                            <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
-                            <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
-                            <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
-        		            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
-                            <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
-                            <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
-                            <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
+    </div>
+    <!--top end-->
+    <div class="page">
+        <div class="wrap">
+            <div class="shop-left">
+                <div class="item-title">
+                    <h3>交易管理</h3>
+                </div>
+                <ul>
+                    <li><a href="../Order/OrderList.html">已卖出商品</a></li>
+                    <li><a h./MyAccount.html">我的账户</a></li>
+                    <li><a href="../Ret/ExchangeGood.html">换货管理</a></li>
+                    <li><a href="../Ret/ReturnGood.html">退货管理</a></li>
+                    <li><a href="../Ret/evaluate.html">评价管理</a></li>
+                </ul>
+                <div class="item-title">
+                    <h3>物流管理</h3>
+                </div>
+                <ul>
+                    <li><a id="SendOrder" href="../Order/WaitOrder.html">发货</a></li>
+                    <li><a href="../Freight/List.html">运费模板</a></li>
+                </ul>
+                <div class="item-title">
+                    <h3>商品管理</h3>
+                </div>
+                <ul>
+                    <li><a target="_blank" href="../Product/ReleaseProduct.html">发布商品</a></li>
+                    <li><a href="../Product/SalesProduct.html">出售中的商品</a></li>
+                    <li><a href="../Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
+                    <li><a target="_blank" href="../Product/Category.html">商品分类管理</a></li>
+                    <li><a target="_blank" href="../Product/ProductManager.html">商品批量管理</a></li>
+                </ul>
+                <div class="item-title">
+                    <h3>店铺管理</h3>
+                </div>
+                <ul name="shop">
+                    <li><a target="_blank" href="../Photo/List.html">图片空间</a></li>
+                    <li><a href="./CompanyInfo.html">企业信息</a></li>
+                    <li><a href="./ShopInfo.html">店铺基本设置</a></li>
+		            <li><a href="../Product/RecommendProduct.html">店铺装修</a></li>
+                    <li><a href="./WaiterItem.html">在线客服</a></li>
+                    <li><a href="./addressEdit.html">地址管理</a></li>
+                    <li><a href="./insideletter.html">站内信</a></li>
+                </ul>
+            </div>
+            <div class="shop-right">
+                <div class="data-list data-list-goods">
+                    <div class="hd">
+                        <ul class="tabs-nav">
+                            <li class="current"><a name="tab1" id="tab1" href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
                         </ul>
                     </div>
-                    <div class="shop-right">
-                        <div class="data-list data-list-goods">
-                            <div class="hd">
-                                <ul class="tabs-nav">
-                                    <li class="current"><a name="tab1" id="tab1" href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
-                                </ul>
-                            </div>
-                            <form id="formModel" data-id="0" style="display: none;" autocomplete="off">
-                                <div id="trade-search-box">
-                                    <table style="width: 100%;" class="editTable">
-                                        <tr>
-                                            <td class="ltd"><span class="red">*</span>模块名称：</td>
-                                            <td><input name="name" id="name" type="text" /></td>
-                                            <td class="ltd">模块类型：</td>
-                                            <td>
-                                                <label><input name="Type" type="radio" value="1" />广告图片</label>
-                                                <label><input name="Type" type="radio" value="2" />商品</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ltd">模块：
-                                            </td>
-                                            <td>
-                                                <select name="code" id="code">
-                                                    <option value="1">PC首页轮播1920x400</option>
-                                                    <option value="2">首页商品热推230x230</option>
-                                                    <option value="3">首页商品推荐200x200</option>
-                                                    <option value="4">手机首页轮播750x314</option>
-                                                </select>
-                                                
-                                            </td>
-                                            <td class="ltd">状态：</td>
-                                            <td>
-                                                <label><input name="status" type="radio" value="0" />禁用</label>
-                                                <label><input name="status" type="radio" value="1" checked="checked" />启用</label>
-                                            </td>
-                    
-                                        </tr>
-                                        <tr style="display: none;">
-                                            <td class="ltd">开始时间：</td>
-                                            <td><input name="startTime" id="startTime" type="text" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
-                                            <td class="ltd">结束时间：</td>
-                                            <td>
-                                                <input name="endTime" id="endTime" type="text" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ltd">背景(1200x32)：</td>
-                                            <td valign="top">
-                                                <input name="showBg" id="showBg" type="text" value="" />
-                                                <a href="javascript:void(0);" id="a_showBg">从图片空间选择</a>
-                                                <img _src="http://img.wdj360.com" id="img_showBg" height="30" style="max-width: 50px;" />
-                                            </td>
-                                            <td class="ltd">字体颜色：</td>
-                                            <td><input name="color" id="color" type="text" value="" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="4"><div id="showBgList"></div></td>
-                                        </tr>
-                    
-                                        <tr>
-                                            <td class="ltd">链接：</td>
-                                            <td><input name="link" id="link" type="text" /></td>
-                                            <td class="ltd">排序：</td>
-                                            <td><input name="orderNo" id="orderNo" type="text" value="0" /><strong class="red">(必须是数字)</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="4" style="text-align: center;">
-                                                <input type="button" value="保存" id="save" class="btn btn-sm btn-corOrange" />
-                                                <input type="button" value="取消" onclick="cancel();" class="btn btn-sm btn-corGrey" />
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </form>
-                    
-                            <div id="J_DataTable" class="bd">
-                    
-                                <div class="search-form" style="text-align: center;">
-                                    <div style="text-align: left;">
-                                        <button class="btn btn-ts btn-corYellow" onclick="addModel();"> 添加</button>
-                                    </div>
-                                    <form style="margin-bottom: 20px;">
-                                        <table class="editTable">
-                                            <tr>
-                                                <td class="ltd">模块名称：</td>
-                                                <td><input type="text" size="20" name="name" id="name" /></td>
-                                                <td class="ltd">模块类型：</td>
-                                                <td>
-                                                    <select name="type" id="type">
-                                                        <option value="-1">全部</option>
-                                                        <option value="1">广告图片</option>
-                                                        <option value="2">商品</option>
-                                                    </select>
-                                                </td>
-                                                <td class="ltd">模块：</td>
-                                                <td>
-                                                    <select name="code" id="code">
-                                                        <option value="-1">全部</option>
-                                                        <option value="1">首页轮播1920x400</option>
-                                                        <option value="2">首页商品热推230x230</option>
-                                                        <option value="3">首页商品推荐200x200</option>
-                                                        <option value="4">手机首页轮播750x314</option>
-                                                    </select>
-                                                    
-                                                </td>
-                                                <td class="ltd">
-                                                    <button class="btn btn-ts btn-corRed" type="submit">搜索</button>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </div>
-                                <div id="ContentPlaceHolder_listData" class="list-head">
-                                    <table>
-                                        <colgroup>
-                                            <col width="1">
-                                            <col width="250">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="200">
-                                            <col width="100">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>模块名称</th>
-                                                <th>模块类型</th>
-                                                <th>模块</th>
-                                                <th>状态</th>
-                                                <th>操作</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-                                <table>
-                                    <colgroup>
-                                        <col width="1">
-                                        <col width="250">
-                                        <col width="200">
-                                        <col width="200">
-                                        <col width="200">
-                                        <col width="100">
-                                    </colgroup>
-                                    <tbody class="data">
-                                        <tr class="empty-data" style=''>
-                                            <td colspan="7">没有推荐数据</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div id="ContentPlaceHolder_pnPage" class="digg">
-                            </div>
+                    <form id="formModel" data-id="0" style="display: none;" autocomplete="off">
+                        <div id="trade-search-box">
+                            <table style="width: 100%;" class="editTable">
+                                <tr>
+                                    <td class="ltd"><span class="red">*</span>模块名称：</td>
+                                    <td><input name="name" id="name" type="text" /></td>
+                                    <td class="ltd">模块类型：</td>
+                                    <td>
+                                        <label><input name="Type" type="radio" value="1" />广告图片</label>
+                                        <label><input name="Type" type="radio" value="2" />商品</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ltd">模块：
+                                    </td>
+                                    <td>
+                                        <select name="code" id="code">
+                                            <option value="1">PC首页轮播1920x400</option>
+                                            <option value="2">首页商品热推230x230</option>
+                                            <option value="3">首页商品推荐200x200</option>
+                                            <option value="4">手机首页轮播750x314</option>
+                                        </select>
+                                        
+                                    </td>
+                                    <td class="ltd">状态：</td>
+                                    <td>
+                                        <label><input name="status" type="radio" value="0" />禁用</label>
+                                        <label><input name="status" type="radio" value="1" checked="checked" />启用</label>
+                                    </td>
+            
+                                </tr>
+                                <tr style="display: none;">
+                                    <td class="ltd">开始时间：</td>
+                                    <td><input name="startTime" id="startTime" type="text" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
+                                    <td class="ltd">结束时间：</td>
+                                    <td>
+                                        <input name="endTime" id="endTime" type="text" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ltd">背景(1200x32)：</td>
+                                    <td valign="top">
+                                        <input name="showBg" id="showBg" type="text" value="" />
+                                        <a href="javascript:void(0);" id="a_showBg">从图片空间选择</a>
+                                        <img _src="http://img.wdj360.com" id="img_showBg" height="30" style="max-width: 50px;" />
+                                    </td>
+                                    <td class="ltd">字体颜色：</td>
+                                    <td><input name="color" id="color" type="text" value="" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><div id="showBgList"></div></td>
+                                </tr>
+            
+                                <tr>
+                                    <td class="ltd">链接：</td>
+                                    <td><input name="link" id="link" type="text" /></td>
+                                    <td class="ltd">排序：</td>
+                                    <td><input name="orderNo" id="orderNo" type="text" value="0" /><strong class="red">(必须是数字)</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align: center;">
+                                        <input type="button" value="保存" id="save" class="btn btn-sm btn-corOrange" />
+                                        <input type="button" value="取消" onclick="cancel();" class="btn btn-sm btn-corGrey" />
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="bottom">
-                <div class="content">
-                    <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+                    </form>
+            
+                    <div id="J_DataTable" class="bd">
+                        <div class="search-form" style="text-align: center;">
+                            <div style="text-align: left;">
+                                <button class="btn btn-ts btn-corYellow" onclick="addModel();"> 添加</button>
+                            </div>
+                            <form style="margin-bottom: 20px;">
+                                <table class="editTable">
+                                    <tr>
+                                        <td class="ltd">模块名称：</td>
+                                        <td><input type="text" size="20" name="name" id="name" /></td>
+                                        <td class="ltd">模块类型：</td>
+                                        <td>
+                                            <select name="type" id="type">
+                                                <option value="-1">全部</option>
+                                                <option value="1">广告图片</option>
+                                                <option value="2">商品</option>
+                                            </select>
+                                        </td>
+                                        <td class="ltd">模块：</td>
+                                        <td>
+                                            <select name="code" id="code">
+                                                <option value="-1">全部</option>
+                                                <option value="1">首页轮播1920x400</option>
+                                                <option value="2">首页商品热推230x230</option>
+                                                <option value="3">首页商品推荐200x200</option>
+                                                <option value="4">手机首页轮播750x314</option>
+                                            </select>
+                                            
+                                        </td>
+                                        <td class="ltd">
+                                            <button class="btn btn-ts btn-corRed" type="submit">搜索</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div id="ContentPlaceHolder_listData" class="list-head">
+                            <table>
+                                <colgroup>
+                                    <col width="1">
+                                    <col width="250">
+                                    <col width="200">
+                                    <col width="200">
+                                    <col width="200">
+                                    <col width="100">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>模块名称</th>
+                                        <th>模块类型</th>
+                                        <th>模块</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <table>
+                            <colgroup>
+                                <col width="1">
+                                <col width="250">
+                                <col width="200">
+                                <col width="200">
+                                <col width="200">
+                                <col width="100">
+                            </colgroup>
+                            <tbody class="data">
+                                <tr class="empty-data" style=''>
+                                    <td colspan="7">没有推荐数据</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="ContentPlaceHolder_pnPage" class="digg"></div>
+                    </div>
                 </div>
             </div>
-        <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
-        <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
-    </body>
-    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
-    <script type="text/javascript" src="../lib/Common.js"></script>
+        </div>
+    </div>
 
-    <script type="text/javascript" src="../lib/jquery.pagination.js"></script>
-    <script type="text/javascript" src="../lib/jquery.form.min.js"></script>
-    <script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
-    <script type="text/javascript" src="../js/shop/jquery.minicolors.js"></script>
-    <script type="text/javascript" src="../lib/MyPhoto.js"></script><script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/MyPhoto.js?v=04"></script>
-    <script type="text/javascript" src="../js/shop/RecommendProduct.js"></script>
+    <div class="bottom">
+        <div class="content">
+            <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+        </div>
+    </div>
+</body>
 
+<script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+<script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+<script type="text/javascript" src="../lib/Common.js"></script>
+<script type="text/javascript" src="../lib/jquery.pagination.js"></script>
+<script type="text/javascript" src="../lib/jquery.form.min.js"></script>
+<script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../js/shop/jquery.minicolors.js"></script>
+<script type="text/javascript" src="../lib/MyPhoto.js"></script><script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/MyPhoto.js?v=04"></script>
+<script type="text/javascript" src="../js/shop/RecommendProduct.js"></script>
+<script>
+    $(function () {
+        var href = window.location.href
+        var index = href.indexOf('?');
+        if (index == -1) {
+            index = href.length;
+        }
+        href = href.substring(0, index);
+
+        if (href.indexOf("Order/DeliverGoods.html") != -1) {
+            href = $("#SendOrder").attr("href");
+        }
+        href = href.replace("aspx", "html");
+        var oldhref = "";
+        $(".shop-left ul li a").each(function (i) {
+            oldhref = $(this).attr("href");
+            index = oldhref.indexOf('?');
+            if (index == -1) {
+                index = oldhref.length;
+            }
+            oldhref = oldhref.substring(0, index);
+            if (oldhref == href) {
+                $(this).parent().addClass("select");
+                $(this).css("color", "#ffffff");
+            }
+        });
+
+        //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
+        //    if (data.status) {
+        //        var li = $("ul[name='shop']").find("li:eq(0)");
+        //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
+        //    }
+        //    $(".shop-left li").bind("mouseover", function () {
+        //        if ($(this).hasClass("select")) {
+        //            $(this).find("a").css("text-decoration", "underline");
+        //            return;
+        //        }
+        //        $(this).addClass("hover");
+
+        //    });
+        //    $(".shop-left li").bind("mouseout", function () {
+        //        $(this).removeClass("hover");
+        //        $(this).find("a").css("text-decoration", "none");
+        //    });
+
+        //}, "json");
+    });
+</script>
 </html>

@@ -51,174 +51,170 @@ var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back"
                     <h3>交易管理</h3>
                 </div>
                 <ul>
-                    <li><a href="http://member.wdj360.com/Order/OrderList.html">已卖出商品</a></li>
-                    <li><a href="http://member.wdj360.com/Shop/MyAccount.html">我的账户</a></li>
-                      <li><a href="http://member.wdj360.com/Ret/ExchangeGood.html">换货管理</a></li>
-                      <li><a href="http://member.wdj360.com/Ret/ReturnGood.html">退货管理</a></li>
-                    <li><a href="http://member.wdj360.com/Ret/evaluate.html">评价管理</a></li>
+                    <li><a href="../Order/OrderList.html">已卖出商品</a></li>
+                    <li><a href="../Shop/MyAccount.html">我的账户</a></li>
+                      <li><a href="./ExchangeGood.html">换货管理</a></li>
+                      <li><a href="./ReturnGood.html">退货管理</a></li>
+                    <li><a href="./evaluate.html">评价管理</a></li>
                 </ul>
                 <div class="item-title">
                     <h3>物流管理</h3>
                 </div>
                 <ul>
-                    <li><a id="SendOrder" href="http://member.wdj360.com/Order/WaitOrder.html">发货</a></li>
-                    <li><a href="http://member.wdj360.com/Freight/List.html">运费模板</a></li>
+                    <li><a id="SendOrder" href="../Order/WaitOrder.html">发货</a></li>
+                    <li><a href="../Freight/List.html">运费模板</a></li>
                 </ul>
                 <div class="item-title">
                     <h3>商品管理</h3>
                 </div>
                 <ul>
-                    <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
-                    <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
-                    <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
-                    <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
-                    <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
-                   
+                    <li><a target="_blank" href="../Product/ReleaseProduct.html">发布商品</a></li>
+                    <li><a href="../Product/SalesProduct.html">出售中的商品</a></li>
+                    <li><a href="../Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
+                    <li><a target="_blank" href="../Product/Category.html">商品分类管理</a></li>
+                    <li><a target="_blank" href="../Product/ProductManager.html">商品批量管理</a></li>
                 </ul>
                 <div class="item-title">
                     <h3>店铺管理</h3>
                 </div>
                 <ul name="shop">
-                    <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
-                    <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
-                    <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
-    	            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
-                    <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
-                    
-                    <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
-                    <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
+                    <li><a target="_blank" href="../Photo/List.html">图片空间</a></li>
+                    <li><a href="../Shop/CompanyInfo.html">企业信息</a></li>
+                    <li><a href="../Shop/ShopInfo.html">店铺基本设置</a></li>
+    	            <li><a href="../Product/RecommendProduct.html">店铺装修</a></li>
+                    <li><a href="../Shop/WaiterItem.html">在线客服</a></li>
+                    <li><a href="../Shop/addressEdit.html">地址管理</a></li>
+                    <li><a href="../Shop/insideletter.html">站内信</a></li>
                 </ul>
             </div>
             <div class="shop-right">
-                
-           <div id="main-content">
-                <form action="/Ret/ReturnGood.aspx">
-                    <div id="trade-search-box">
-                        <div class="bd">
+               <div id="main-content">
+                    <form action="/Ret/ReturnGood.aspx">
+                        <div id="trade-search-box">
+                            <div class="bd">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="single-col">
+                                                <label>
+                                                    退货单号：</label><input type="text" name="returnCode" onkeyup="txtHelper.enOrNum(this)" maxlength="25" />
+                                            </td>
+                                            <td class="double-cols" colspan="2">
+                                                <label>申请时间：</label><input type="text" id="txtStartDate" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}',dateFmt:'yyyy-MM-dd HH:mm'})" class="Wdate" name="startDate" value="" />
+                                            <label style="padding: 0px;">
+                                                到</label>
+                                                <input type="text" class="Wdate" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd HH:mm'})"
+                                                    id="txtEndDate" name="endDate" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="single-col">
+                                                <label>
+                                                    订单编号：</label><input type="text" size="11" name="orderCode" value="" onkeyup="txtHelper.enOrNum(this)" maxlength="25" />
+                                            </td>
+                                            <td class="single-col">
+                                                <label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买家：</label><input type="text" size="15" name="memberName" value="" maxlength="30" />
+                                            </td>
+                                            <td class="single-col">
+                                                <label>
+                                                    审核状态：</label>
+                                                <select id="comOrderStatus" name="reviewType">
+                                                    <option value="0">全部</option>
+                                                    <option value="1">提交申请</option>
+                                                    <option value="2">商家审核通过</option>
+                                                    <option value="3">商家审核不通过</option>
+                                                    <option value="4">买家已发货</option>
+                                                    <option value="5">卖家已收货</option>
+                                                    <option value="6">退款成功</option>
+                                                    <option value="7">取消申请</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" colspan="3" style="padding-right: 84px;">
+                                                <button type="submit" class="btn btn-corRed btn-ts" id="searchData">
+                                                    搜索</button>
+                                               
+                                                <button class="btn btn-corGrey btn-ts" type="reset">
+                                                    重置</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                           
+                        </div>
+                    </form>
+                    <div class="item-list">
+                        <div class="item-list-bd">
                             <table>
-                                <tbody>
+                                <colgroup>
+                                    <col class="item-list-col0">
+                                    <col class="item-list-col1">
+                                    <!-- 商品 -->
+                                    <col class="item-list-col6">
+                                    <!-- 单价(元) -->
+                                    <col class="item-list-col3">
+                                    <!-- 数量 -->
+                                    <col class="item-list-col4">
+                                    <!-- 纠纷 -->
+                                    <col class="item-list-col6">
+                                    <!-- 买家 -->
+                                    <col class="item-list-col7">
+                                    <!-- 交易状态 -->
+                                    <col class="item-list-col8">
+                                    <!-- 实收款(元) -->
+                                </colgroup>
+
+                                <thead>
                                     <tr>
-                                        <td class="single-col">
-                                            <label>
-                                                退货单号：</label><input type="text" name="returnCode" onkeyup="txtHelper.enOrNum(this)" maxlength="25" />
-                                        </td>
-                                        <td class="double-cols" colspan="2">
-                                            <label>申请时间：</label><input type="text" id="txtStartDate" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}',dateFmt:'yyyy-MM-dd HH:mm'})" class="Wdate" name="startDate" value="" />
-                                        <label style="padding: 0px;">
-                                            到</label>
-                                            <input type="text" class="Wdate" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd HH:mm'})"
-                                                id="txtEndDate" name="endDate" value="" />
-                                        </td>
+                                        <th></th>
+                                        <th class="item">商品
+                                        </th>
+                                        <th class="price">单价(元)
+                                        </th>
+                                        <th class="num">数量
+                                        </th>
+                                        <th class="trouble"></th>
+                                        <th class="contact">买家
+                                        </th>
+
+                                        <th class="order-price">是否收到货
+                                        </th>
+                                        <th class="trade-status">状态
+                                        </th>
                                     </tr>
+                                </thead>
+                                <tbody class="act" style="display: none;">
                                     <tr>
-                                        <td class="single-col">
-                                            <label>
-                                                订单编号：</label><input type="text" size="11" name="orderCode" value="" onkeyup="txtHelper.enOrNum(this)" maxlength="25" />
-                                        </td>
-                                        <td class="single-col">
-                                            <label>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买家：</label><input type="text" size="15" name="memberName" value="" maxlength="30" />
-                                        </td>
-                                        <td class="single-col">
-                                            <label>
-                                                审核状态：</label>
-                                            <select id="comOrderStatus" name="reviewType">
-                                                <option value="0">全部</option>
-                                                <option value="1">提交申请</option>
-                                                <option value="2">商家审核通过</option>
-                                                <option value="3">商家审核不通过</option>
-                                                <option value="4">买家已发货</option>
-                                                <option value="5">卖家已收货</option>
-                                                <option value="6">退款成功</option>
-                                                <option value="7">取消申请</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td align="right" colspan="3" style="padding-right: 84px;">
-                                            <button type="submit" class="btn btn-corRed btn-ts" id="searchData">
-                                                搜索</button>
-                                           
-                                            <button class="btn btn-corGrey btn-ts" type="reset">
-                                                重置</button>
+                                        <td colspan="8">
+                                            <div class="operations">
+                                                <input class="all-selector" type="checkbox" id="all">
+                                                <label for="all">
+                                                    全选</label>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
+                                <tbody class="order"></tbody>
+                                
+                                
+                                <tbody>
+                                    <tr>
+                                        <td class="unfound-results" colspan="8">
+                                            <div class="attention">
+                                                没有退货录！
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
                             </table>
                         </div>
-                       
                     </div>
-                </form>
-                <div class="item-list">
-                    <div class="item-list-bd">
-                        <table>
-                            <colgroup>
-                                <col class="item-list-col0">
-                                <col class="item-list-col1">
-                                <!-- 商品 -->
-                                <col class="item-list-col6">
-                                <!-- 单价(元) -->
-                                <col class="item-list-col3">
-                                <!-- 数量 -->
-                                <col class="item-list-col4">
-                                <!-- 纠纷 -->
-                                <col class="item-list-col6">
-                                <!-- 买家 -->
-                                <col class="item-list-col7">
-                                <!-- 交易状态 -->
-                                <col class="item-list-col8">
-                                <!-- 实收款(元) -->
-                            </colgroup>
-
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th class="item">商品
-                                    </th>
-                                    <th class="price">单价(元)
-                                    </th>
-                                    <th class="num">数量
-                                    </th>
-                                    <th class="trouble"></th>
-                                    <th class="contact">买家
-                                    </th>
-
-                                    <th class="order-price">是否收到货
-                                    </th>
-                                    <th class="trade-status">状态
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="act" style="display: none;">
-                                <tr>
-                                    <td colspan="8">
-                                        <div class="operations">
-                                            <input class="all-selector" type="checkbox" id="all">
-                                            <label for="all">
-                                                全选</label>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody class="order"></tbody>
-                            
-                            
-                            <tbody>
-                                <tr>
-                                    <td class="unfound-results" colspan="8">
-                                        <div class="attention">
-                                            没有退货录！
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            
-                        </table>
-                    </div>
+                    <div id="ContentPlaceHolder_pnPage" class="digg"></div>
                 </div>
-                <div id="ContentPlaceHolder_pnPage" class="digg"></div>
-            </div>
-
             </div>
         </div>
     </div>
