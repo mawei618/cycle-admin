@@ -1,0 +1,279 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>企业信息</title>
+        <script type="text/javascript" language="javascript">
+        	var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
+        </script>
+        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+        <link href="../css/shop/validator.css" rel="stylesheet" type="text/css" />
+    
+        <script>
+            $(function () {
+                var href = window.location.href
+                var index = href.indexOf('?');
+                if (index == -1) {
+                    index = href.length;
+                }
+                href = href.substring(0, index);
+    
+                if (href.indexOf("Order/DeliverGoods.html") != -1) {
+                    href = $("#SendOrder").attr("href");
+                }
+                href = href.replace("aspx", "html");
+                var oldhref = "";
+                $(".shop-left ul li a").each(function (i) {
+                    oldhref = $(this).attr("href");
+                    index = oldhref.indexOf('?');
+                    if (index == -1) {
+                        index = oldhref.length;
+                    }
+                    oldhref = oldhref.substring(0, index);
+                    if (oldhref == href) {
+                        $(this).parent().addClass("select");
+                        $(this).css("color", "#ffffff");
+                    }
+                });
+    
+                //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
+                //    if (data.status) {
+                //        var li = $("ul[name='shop']").find("li:eq(0)");
+                //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
+                //    }
+                //    $(".shop-left li").bind("mouseover", function () {
+                //        if ($(this).hasClass("select")) {
+                //            $(this).find("a").css("text-decoration", "underline");
+                //            return;
+                //        }
+                //        $(this).addClass("hover");
+    
+                //    });
+                //    $(".shop-left li").bind("mouseout", function () {
+                //        $(this).removeClass("hover");
+                //        $(this).find("a").css("text-decoration", "none");
+                //    });
+    
+                //}, "json");
+            });
+        </script>
+    </head>
+    <body>
+        
+    <!--top begin-->
+    <div class="top">
+        <div class="content">
+            <div class="fl my-headLogo">
+                <a href="/Shop/MyAccount.html">
+                    <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                </a>
+            </div>
+            <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+            <div class="my-headTopInfor">
+                <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                    &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                    <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+            </div>
+    
+            <div class="fr drops">
+                <div class="dropdown">
+                    <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                    <div class="trancelate">
+                        <ul id="langs">
+                            <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top end-->
+    
+        <div class="page">
+            <div class="wrap">
+                <div class="shop-left">
+                    <div class="item-title">
+                        <h3>交易管理</h3>
+                    </div>
+                    <ul>
+                        <li><a href="http://member.wdj360.com/Order/OrderList.html">已卖出商品</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/MyAccount.html">我的账户</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/ExchangeGood.html">换货管理</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/ReturnGood.html">退货管理</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/evaluate.html">评价管理</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>物流管理</h3>
+                    </div>
+                    <ul>
+                        <li><a id="SendOrder" href="http://member.wdj360.com/Order/WaitOrder.html">发货</a></li>
+                        <li><a href="http://member.wdj360.com/Freight/List.html">运费模板</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>商品管理</h3>
+                    </div>
+                    <ul>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
+                        <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
+                        <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
+                       
+                    </ul>
+                    <div class="item-title">
+                        <h3>店铺管理</h3>
+                    </div>
+                    <ul name="shop">
+                        
+                        
+                        
+                        <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
+    		            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
+                    </ul>
+                </div>
+                <div class="shop-right">
+                    
+        <div class="my-moneyInfor">
+            <dl class="clearfix">
+                <dt>基本信息</dt>
+                <dd></dd>
+            </dl>
+        </div>
+        <div class="uppwd">
+            <dl class="clearfix">
+                <dt>帐号：</dt>
+                <dd>15238203791</dd>
+            </dl>
+        </div>
+        <form name="subform" id="subform" action="" onsubmit="return false;" >
+        <div class="my-moneyInfor">
+            <dl class="clearfix">
+                <dt>公司信息</dt>
+                <dd></dd>
+            </dl>
+        </div>
+        <div class="uppwd">
+            <dl class="clearfix">
+                <dt>公司名：</dt>
+                <dd>平顶山市湛河区保林农艺苑</dd>
+            </dl>
+            <dl class="clearfix">
+                <dt>注册地址：</dt>
+                <dd>中国 曹镇乡褚庄村</dd>
+            </dl>
+            <dl class="clearfix">
+                <dt><span class="red">*</span> 法人代表：</dt>
+                <dd>
+                   <input type="text" value="" class="w300" id="legalPerson" name="legalPerson" maxlength="20" /> 
+                   <span id="legalPersonTip" class="">法人代表不能为空,请确认</span>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt><span class="red">*</span> 注册资金：</dt>
+                <dd>
+                    <input type="text" value="0" class="w134" id="capital" name="capital" maxlength="6"  onkeyup="txtHelper.Float2(this,1)" />  万元
+                    <span id="capitalTip" class="">参照营业执照，请填写正确一致的信息</span>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt><span class="red">*</span> 营业执照有效期：</dt>
+                <dd>
+                    <input type="text" class="Storesd_ddtime Wdate" id="businessStartTime" readonly="readonly"  name="businessStartTime"  onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'businessEndTime\')||\'%y-%M-%d\'}'})" value="" />
+                    <span class="Storesd_ddspan">到</span>
+                    <input type="text" class="Storesd_ddtime Wdate" id="businessEndTime" readonly="readonly" name="businessEndTime"  onfocus="WdatePicker({minDate:'#F{$dp.$D(\'businessStartTime\')}'})" value="" />
+                    <span id="businessStartTimeTip" class="">营业执照有效期必须选择</span>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt><span class="red">*</span> 营业执照经营范围：</dt>
+                <dd>
+                    <textarea name="licenseAppScope" id="licenseAppScope"  class="w300" maxlength="200"></textarea>
+                    <span id="licenseAppScopeTip" class="">参照营业执照，请填写正确一致的信息</span>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt>公司官网地址：</dt>
+                <dd>
+                    <input type="text" value="" id="officialUrl" class="w300" name="officialUrl"  maxlength="80" />
+                    <span id="officialUrlTip" class="">参照营业执照，请填写正确一致的信息</span>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt>电话号码：</dt>
+                <dd>
+                    <input type="text" id="customerPhone" name="customerPhone" value="" class="w300" maxlength="20"  />
+                    <span id="customerPhoneTip" class="">电话号码不能为空,请确认</span>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt>传真号码：</dt>
+                <dd>
+                    <input type="text" id="fax" name="fax" value="" class="w300" maxlength="20"  />
+                    <span id="faxTip" class="">传真不能为空,请确认</span>
+                </dd>
+            </dl>
+            
+        </div>
+        <div class="my-moneyInfor">
+            <dl class="clearfix">
+                <dt>联系信息</dt>
+                <dd></dd>
+            </dl>
+            </div>
+        <div class="uppwd"> 
+            <dl class="clearfix">
+                <dt><span class="red">*</span> 联系人：</dt>
+                <dd>
+                    <input type="text" value="" id="contactName" name="contactName" class="w300" maxlength="24" />
+                    <span id="contactNameTip" class="">姓名不能为空,请确认</span>
+                </dd>
+            </dl>
+            
+            <dl class="clearfix">
+                <dt>联系手机：</dt>
+                <dd>15238203791</dd>
+            </dl>
+            <dl class="clearfix">
+                <dt><span class="red">*</span> 电子邮箱：</dt>
+                <dd>
+                    <input type="text" value="" class="w300" id="email" name="email" maxlength="20" />
+                    <span id="emailTip" class="">电子邮箱不能为空,请确认</span>
+                </dd>
+            </dl>
+            <dl class="clearfix"></dl>
+            <dl class="clearfix">
+                    <dt>&nbsp;</dt>
+                    <dd><input type="submit" id="btnSubmit" value="修改" class="btn form-save btn-corOrange btn-smLine w100" /></dd>
+                </dl>
+        </div>
+        </form>
+    
+                </div>
+            </div>
+        </div>
+        
+     <div class="bottom">
+            <div class="content">
+                <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+            </div>
+        </div>
+    <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+    </body>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../lib/Common.js"></script>
+
+    <script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../js/shop/formValidator.min.js"></script>
+    <script type="text/javascript" src="../js/shop/formValidatorRegex.js"></script>
+    <script type="text/javascript" src="../js/shop/CompanyInfo.js"></script>
+
+</html>

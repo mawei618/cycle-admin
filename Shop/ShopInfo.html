@@ -1,0 +1,291 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>商家中心</title>
+        <script type="text/javascript" language="javascript">
+        var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
+        </script>
+        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+        <link href="../css/shop/shopInfo.css?v=04" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/jquery.minicolors.css" rel="stylesheet" type="text/css" />
+    
+        <script>
+            $(function () {
+                var href = window.location.href
+                var index = href.indexOf('?');
+                if (index == -1) {
+                    index = href.length;
+                }
+                href = href.substring(0, index);
+    
+                if (href.indexOf("Order/DeliverGoods.html") != -1) {
+                    href = $("#SendOrder").attr("href");
+                }
+                href = href.replace("aspx", "html");
+                var oldhref = "";
+                $(".shop-left ul li a").each(function (i) {
+                    oldhref = $(this).attr("href");
+                    index = oldhref.indexOf('?');
+                    if (index == -1) {
+                        index = oldhref.length;
+                    }
+                    oldhref = oldhref.substring(0, index);
+                    if (oldhref == href) {
+                        $(this).parent().addClass("select");
+                        $(this).css("color", "#ffffff");
+                    }
+                });
+    
+                //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
+                //    if (data.status) {
+                //        var li = $("ul[name='shop']").find("li:eq(0)");
+                //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
+                //    }
+                //    $(".shop-left li").bind("mouseover", function () {
+                //        if ($(this).hasClass("select")) {
+                //            $(this).find("a").css("text-decoration", "underline");
+                //            return;
+                //        }
+                //        $(this).addClass("hover");
+    
+                //    });
+                //    $(".shop-left li").bind("mouseout", function () {
+                //        $(this).removeClass("hover");
+                //        $(this).find("a").css("text-decoration", "none");
+                //    });
+    
+                //}, "json");
+            });
+        </script>
+    </head>
+    
+    <body>
+        <!--top begin-->
+        <div class="top">
+            <div class="content">
+                <div class="fl my-headLogo">
+                    <a href="/Shop/MyAccount.html">
+                        <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                    </a>
+                </div>
+                <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+                <div class="my-headTopInfor">
+                    <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                        &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                        <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+                </div>
+        
+                <div class="fr drops">
+                    <div class="dropdown">
+                        <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                        <div class="trancelate">
+                            <ul id="langs">
+                                <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--top end-->
+        
+            <div class="page">
+                <div class="wrap">
+                    <div class="shop-left">
+                        <div class="item-title">
+                            <h3>交易管理</h3>
+                        </div>
+                        <ul>
+                            <li><a href="http://member.wdj360.com/Order/OrderList.html">已卖出商品</a></li>
+                            <li><a href="http://member.wdj360.com/Shop/MyAccount.html">我的账户</a></li>
+                            <li><a href="http://member.wdj360.com/Ret/ExchangeGood.html">换货管理</a></li>
+                            <li><a href="http://member.wdj360.com/Ret/ReturnGood.html">退货管理</a></li>
+                            <li><a href="http://member.wdj360.com/Ret/evaluate.html">评价管理</a></li>
+                        </ul>
+                        <div class="item-title">
+                            <h3>物流管理</h3>
+                        </div>
+                        <ul>
+                            <li><a id="SendOrder" href="http://member.wdj360.com/Order/WaitOrder.html">发货</a></li>
+                            <li><a href="http://member.wdj360.com/Freight/List.html">运费模板</a></li>
+                        </ul>
+                        <div class="item-title">
+                            <h3>商品管理</h3>
+                        </div>
+                        <ul>
+                            <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
+                            <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
+                            <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
+                            <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
+                            <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
+                           
+                        </ul>
+                        <div class="item-title">
+                            <h3>店铺管理</h3>
+                        </div>
+                        <ul name="shop">
+                            <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
+                            <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
+                            <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
+        		            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
+                            <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
+                            <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
+                            <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
+                        </ul>
+                    </div>
+                    <div class="shop-right">
+                        <input name="ctl00$ContentPlaceHolder$imgDomain" type="hidden" id="imgDomain" />
+                            <form action="" method="post" id="formShopInfo" onsubmit="return myOnsubmit();">
+                                <ul class="form-info">
+                                    <li class="ml">
+                                        <label class="item-name">
+                                            <em>*</em>店铺名称：
+                                        </label>
+                                        <div class="sh-name">
+                                            <input type="text" maxlength="20" value="平顶山市湛河区保林农艺苑" class="text1" name="shopName" />
+                                        </div>
+                                    </li>
+                                    <li class="ml">
+                                        <label class="item-name">
+                                            <em>*</em>线下店铺：
+                                        </label>
+                                        <div class="sh-name">
+                                            <input type="checkbox" id="isLineShop" name="isLineShop" checked value="1" /><label for="isLineShop">是否开通</label>
+                                        </div>
+                                    </li>
+                                    <li class="ml returnRatio" style="">
+                                        <label class="item-name">
+                                            <em>*</em>线下店铺让利比：
+                                        </label>
+                                        <div class="sh-name">
+                                            <input type="text" maxlength="10" style="width: 80px;" onkeyup="this.value=this.value.replace(/[^\d{1-9}{1}\.\d{0-9}]/g,'')"
+                                                onafterpaste="this.value=this.value.replace(/[^\d{1-9}{1}\.\d{0-9}]/g,'')"
+                                                class="text1" id="returnRatio" name="returnRatio" value="20" />%
+                                                &nbsp;&nbsp;&nbsp;&nbsp;(注：比例只能在10-80的整数)
+                                        </div>
+                                    </li>
+                                    <li class="ml returnRatio">
+                                        <label class="item-name">
+                                            <em>*</em>客服电话：
+                                        </label>
+                                        <div class="sh-name">
+                                            <input type="text" maxlength="20" style="width: 200px;" class="text1" id="customerServicePhone" name="customerServicePhone" value="15238203791" />
+                                        </div>
+                                    </li>
+                                    <li class="ml3 clear"><span class="item-name">店铺背景：</span>
+                                        <div class="shop-photo">
+                                            <img class="shop-pic" id="imgShopBanner" alt="店铺背景" src="http://img.wdj360.com_110x110.com" height="110" onerror="this.src = 'http://misc.wdj360.com/member/default/images/nopic.jpg'" complete="complete" img.onerror="function(){'this.onerror='null;}">
+                                            <a href="javascript:void(0);" id="a_shopBanner">从图片空间选择</a> 
+                                            <a href="javascript:void(0);" onclick="editImg('#imgShopBanner', '');">删除</a>
+                                            <div id="shopBannerList"></div>
+                                            <div class="upload">
+                                                <a class="btn btn-min btn-corYellow" href="#">上传店招
+                                                    <input type="file" class="simulate_upload" name="shopBanner" id="shopBanner" onchange="uploadLogo(this);" />
+                                                </a>
+                                            </div>
+                                            <div class="clear fl"></div>
+                                            <p class="upload-con">
+                                                <span class="info-tip"><i></i><span id="infoshopBannerTip">建议文件格式GIF、JPG、JPEG、PNG文件大小1M以内，1920x140</span></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                        
+                                    <li class="ml3 clear"><span class="item-name">手机店铺背景：</span>
+                                        <div class="shop-photo">
+                                            <img class="shop-pic" id="imgshopwapBanner" alt="手机店铺背景" src="http://img.wdj360.com_110x110.com" height="110" onerror="this.src='http://misc.wdj360.com/member/default/images/nopic.jpg'" complete="complete" img.onerror="function(){'this.onerror='null;}">
+                                            <a href="javascript:void(0);" id="a_shopwapBanner">从图片空间选择</a> 
+                                            <a href="javascript:void(0);" onclick="editImg('#imgshopwapBanner', '');">删除</a>
+                                            <div id="shopwapBannerList"></div>
+                                            <div class="upload">
+                                                <a class="btn btn-min btn-corYellow" href="#">上传店招
+                                                    <input type="file" class="simulate_upload" name="shopwapBanner" id="shopwapBanner" onchange="uploadLogo(this);" />
+                                                </a>
+                                            </div>
+                                            <div class="clear fl"></div>
+                                            <p class="upload-con">
+                                                <span class="info-tip"><i></i><span id="infoshopwapBannerTip">建议文件格式GIF、JPG、JPEG、PNG文件大小1M以内，750x234</span></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                        
+                                    <li class="ml3 clear">
+                                        <span class="item-name">店铺Logo：</span>
+                                        <div class="shop-photo">
+                                            <img class="shop-pic" id="imgShopLogo" alt="店铺Logo" src="http://img.wdj360.com_110x110.com" width="80" height="80" onerror="this.src='http://misc.wdj360.com/member/default/images/nopic.jpg'" complete="complete" img.onerror="function(){'this.onerror='null;}">
+                                            <a href="javascript:void(0);" id="a_shopLogo">从图片空间选择</a> 
+                                            <a href="javascript:void(0);" onclick="editImg('#imgShopLogo', '');">删除</a>
+                                            <div id="imgShopLogoList"></div>
+                                            <div class="upload">
+                                                <a class="btn btn-min btn-corYellow" href="javascript:void(0);">上传图标
+                                                    <input type="file" class="simulate_upload" name="shopLogo" id="shopLogo" onchange="uploadLogo(this);" />
+                                                </a>
+                                            </div>
+                                            <div class="clear fl"></div>
+                                            <p class="upload-con">
+                                                <span class="info-tip"><i></i><span id="infoTip">建议文件格式GIF、JPG、JPEG、PNG文件大小80K以内，尺寸200x200</span></span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="ml" style="overflow: inherit;">
+                                        <div class="clear fl">
+                                            <label class="item-name">店铺店背颜色：</label>
+                                        </div>
+                                        <div style="width: 500px; padding-left: 130px;" class="sh-category">
+                                            <input type="text" readonly="readonly" name="shopBannerBg" id="shopBannerBg" value="" />
+                                        </div>
+                                    </li>
+                        
+                                    <li class="ml">
+                                        <label class="item-name">店铺简介：</label>
+                                        <div style="width: 500px;" class="sh-category">
+                                            <textarea id="remarkDesc" maxlength="250" name="remarkDesc" style="width: 350px; height: 120px;"
+                                                class="text1"> </textarea>
+                                            <span class="info-tip"><i></i>店铺简介会加入到店铺索引中！</span>
+                                        </div>
+                                    </li>
+                                    <li class="ml" style="display: none;">
+                                        <label class="item-name">联系地址：</label>
+                                        <div class="location-detail">
+                                            <input maxlength="40" type="hidden" class="text4" value="曹镇乡褚庄村" name="contactAddress">
+                                        </div>
+                                        
+                                    </li>
+                                    <li class="ml">
+                                        <label class="item-name">店铺介绍：</label>
+                                        <div>
+                                            <textarea id="describe" name="describe" style="width: 350px; height: 120px;" class="text1" maxlength="4000"> </textarea>
+                                        </div>
+                                    </li>
+                                    <li class="ml2">
+                                        <button class="btn btn-sm btn-corOrange" type="submit" id="btnSave">保存</button>
+                                    </li>
+                                </ul>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            
+         <div class="bottom">
+                <div class="content">
+                    <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+                </div>
+            </div>
+        <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+        <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+    </body>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../lib/Common.js"></script>
+
+    <script type="text/javascript" src="../js/shop/kindeditor-min.js"></script>
+    <script type="text/javascript" src="../js/shop/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="../lib/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../js/shop/MyEditor.js"></script>
+    <script type="text/javascript" src="../js/shop/jquery.minicolors.js"></script>
+    <script type="text/javascript" src="../lib/MyPhoto.js"></script>
+    <script type="text/javascript" src="../js/shop/ShopInfo.js"></script>
+
+</html>

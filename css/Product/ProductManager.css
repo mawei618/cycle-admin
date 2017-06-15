@@ -1,0 +1,267 @@
+.nav,.nav li {
+	height:35px;
+	line-height:35px;
+}
+.nav li a:link,.nav li a:visited {
+	line-height:35px;
+}
+.upload-big {
+	float:left;
+	min-height:500px;
+	width:970px;
+	background-color:#FFFFFF;
+	border-top:none;
+	overflow-x:hidden;
+	overflow-y:auto;
+	margin-left:10px;
+	color:#666;
+}
+.upload-small {
+	overflow-x:hidden;
+	overflow-y:auto;
+	float:left;
+	margin-left:10px;
+	width:200px;
+}
+.navbar {
+	border-right:1px solid #E0E0E0;
+	color:#222222;
+}
+.upload-small {
+	margin:0px;
+}
+.nav-list {
+	line-height:24px;
+}
+.menuitem {
+	position:relative;
+}
+.nav-list .menu-name {
+	background:none repeat scroll 0 0 #EDEDED;
+	border-bottom:1px solid #E0E0E0;
+	display:block;
+	font-size:13px;
+	padding-left:18px;
+}
+.menu-name,.cat-submenu {
+	*zoom:1;
+}
+.navbar a,.navbar a:hover {
+	color:#222222;
+	text-decoration:none;
+}
+.navbar a {
+	display:block;
+	padding-left:7px;
+}
+.submenu {
+	border-bottom:1px solid #E0E0E0;
+	padding-bottom:5px;
+	padding-left:20px;
+}
+.submenu .menuitem {
+	margin-top:5px;
+}
+.navbar a,.navbar a:hover {
+	color:#222222;
+	text-decoration:none;
+}
+.navbar a {
+	display:block;
+	padding-left:7px;
+}
+.list-box {
+	position:relative;
+}
+.list {
+	background:none repeat scroll 0 0 #FFFFFF;
+}
+.list-item {
+	overflow:hidden;
+}
+.thumb-box {
+	float:left;
+	overflow:hidden;
+	margin:10px 0 10px 20px;
+	position:relative;
+	width:226px;
+	height:300px;
+	border:2px solid #FFF;
+}
+.edit-box {
+	padding-left:5px;
+}
+.thumb-box:hover {
+	border-color:#4AB110;
+}
+.thumb {
+	border:2px solid #F2F2F2;
+	display:table-cell;
+	font-size:0;
+	height:204px;
+	text-align:center;
+	vertical-align:middle;
+	width:224px;
+	border:2px solid #f2f2f2;
+	*line-height:204px;
+	_display:block;
+	_font-size:145px;
+	_overflow:hidden;
+	_zoom:1;
+}
+.thumb-name {
+	overflow:hidden;
+	text-align:center;
+	overflow:hidden;
+	padding-left:5px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	width:190px;
+	margin-top:-15px;
+}
+.copy-box {
+	height:20px;
+	position:relative;
+	padding-left:5px;
+	width:100%;
+}
+.copy-code-box,.copy-link-box,.copy-image-box {
+	cursor:pointer;
+	height:18px;
+	line-height:18px;
+	overflow:hidden;
+}
+.checkbox-box {
+	float:left;
+	padding-right:6px;
+}
+.actions {
+	background:#D2EDF5;
+	padding:10px;
+	margin-bottom:20px;
+}
+.opt {
+	background:#D2EDF5;
+	padding:5px 0 5px 10px;
+}
+.cmd {
+	padding-left:5px;
+}
+.del {
+	border-color:Red;
+}
+ 
+.cat-sub {
+	margin-left:10px;
+}
+.filter-form {
+	padding-left:5px
+}
+.title-wrapper {
+	min-height:40px;
+	padding-left:92px;
+	position:relative;
+    word-break: break-all;
+}
+.title .title-wrapper .item-checkbox {
+	left:0;
+	margin-right:18px;
+	position:absolute;
+	top:13px;
+}
+.title .title-wrapper .item-pic,.title .title-wrapper .item-pic a {
+	display:table-cell;
+	height:40px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	text-align:center;
+	vertical-align:middle;
+	width:40px;
+}
+.title .title-wrapper .item-pic {
+	left:30px;
+	position:absolute;
+	top:0;
+}
+.title .title-wrapper .item-pic,.title .title-wrapper .item-pic a {
+	display:table-cell;
+	height:40px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	text-align:center;
+	vertical-align:middle;
+	width:40px;
+}
+.title .title-wrapper .item-pic img {
+	display:inline;
+	max-height:40px;
+	max-width:40px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	text-align:center;
+	vertical-align:middle;
+}
+.categories-wrap {
+	position:relative;
+}
+.categories-popup {
+	left:50px;
+	padding:5px;
+	position:absolute;
+	top:-35px;
+	color:#666;
+	width:150px;
+	z-index:100;
+	text-align:left;
+}
+.categories-div {
+	height:40px;
+	overflow:hidden;
+	margin-top:5px;
+	color:Black;
+	color:#333;
+}
+.item-info {
+	border-bottom:1px dotted #ddd;
+}
+.cb-ve {
+	left:12px;
+	position:absolute;
+	_top:12px;
+	top:12px;
+}
+.categories-edit {
+	width:180px;
+	position:absolute;
+	z-index:1000;
+	padding:10px 0 60px 20px;
+	display:none;
+}
+.categories-edit  .close
+{
+        display: block;
+    height: 20px;
+    left: 175px;
+    position: absolute;
+    top: 2px;
+    width: 35px;
+    z-index: 100;}
+    .categories-edit  .sub
+{
+   
+    width:auto;
+     right:5px;
+    position: absolute;
+     bottom: 5px; }
+     .pr-edit{ padding:10px; width:330px; display:none; height :100px;  z-index: 100; position: absolute;}
+     .selected{ background :#EDEDED;}
+     .shop-cat-list {
+border: 1px solid #E4E4E4;
+height: 135px;
+margin-right: 10px;
+overflow: auto;
+padding: 3px;
+padding-left: 10px;
+width: 495px;
+}
+.text20{width:250px;}

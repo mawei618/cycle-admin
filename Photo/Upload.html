@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>图片上传</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />
+        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
+        <link href="../css/Photo/PicCenter.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/Photo/Jquery.js"></script>
+        <link href="../css/Photo/uploadify.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <!--top begin-->
+        <div class="top">
+            <div class="content">
+                <div class="fl my-headLogo">
+                    <a href="/Shop/MyAccount.html">
+                        <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                    </a>
+                </div>
+                <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+                <div class="my-headTopInfor">
+                    <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                        &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                        <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+                </div>
+        
+                <div class="fr drops">
+                    <div class="dropdown">
+                        <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                        <div class="trancelate">
+                            <ul id="langs">
+                                <span id="translateLoading">
+                                    <img src="http://misc.wdj360.com/member/default/images/loading.gif">
+                                    <p>Loading...</p>
+                                </span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--top end-->
+            <div class="nav">
+                <div class="content">
+                    <h1 class="clearfix" id="logo">
+                        <span class="mlogo"><a target="_top" title="#" href="/index.html"><s></s></a></span>
+                    </h1>
+                    <ul class="nav">
+                        <li><a href="index.html" title="首 页">首 页</a></li>
+                        <li><a href="list.html" title="图片管理">图片管理</a></li>
+                        <li><a href="Upload.html" title="上传图片">上传图片</a></li>
+                        <li><a href="Category.html" title="">图片分类</a></li>
+                        <li><a href="Recycle.html" title="">回收站</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--header end-->
+            <div class="page">
+                
+                <div class="my-bgwhite">
+                    <div id="msg" style="position: absolute; display: none; text-align: center; width: 100%; top: 0px; z-index: 111111; left: 0px;"><strong style="color: #ffffff">图片上传成功！</strong></div>
+                    <div class="upload-big" style="width: 950px;">
+                        <input type="file" name="file_upload" id="file_upload" />
+                    </div>
+                    <div class="upload-small" style="padding-top: 35px;">
+                        <ul>
+                            <li><strong>小提示:</strong> </li>
+                            <li>单张图片大于1M可选择强制压缩</li>
+                            <li>支持.jpg .jpeg .png .gif .bmp格式</li>
+                            <li>一次上传不限张数</li>
+                            <li>如果不能上传，点击这里反映</li>
+                            <li>长按Ctrl可多选文件，Ctrl+A可以全选</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <select id="selCate">
+                                    <option value="3380">默认分类</option>
+                                </select>
+                            </li>
+                            <li>
+                                <div onclick="javascript:upload();" class=" btn btn-big btn-bigLine btn-corOrange" style="margin-top:10px;width:100px;">
+                                    <span class="uploadify-button-text">立即上传</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="bottom">
+                <div class="content">
+                    <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+                </div>
+            </div>
+            <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+            <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+    </body>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../lib/Common.js"></script>
+
+    <script type="text/javascript" src="../js/Photo/jquery.uploadify.min.js"></script>
+    <script type="text/javascript">
+
+        function msg(msg, fun) {
+            $("#msg").find("strong").text(msg);
+            $("#msg").animate({ top: "50px" }, 1500, function () {
+                $(this).css("top", "0px").hide();
+                if (typeof fun === "function") { fun(); }
+            }).show();
+        }
+        $(function () {
+            $('#file_upload').uploadify({
+                'auto': false, //选定文件后是否自动上传，默认false   
+                'sizeLimit': 1024 * 1024 * 1, //设置单个文件大小限制，单位为byte   
+                'onQueueComplete': function (queueData) {
+                    msg('成功上传的文件数: ' + queueData.uploadsSuccessful + ' - 上传出错的文件数: ' + queueData.uploadsErrored);
+                },
+                'onUploadSuccess': function (file, data, response) {
+                    up = true;
+                    data = eval("(" + data + ")");
+                    if (!checkLogin(data)) {
+                        return false;
+                    }
+                    if (!data.status) {
+                        msg(data.message);
+                    } else {
+                        msg('文件名: ' + file.name + ' - 文件大小: ' + file.size + "，上传成功！");
+                    }
+                },
+                'fileObjName': 'Filedata', // 上传参数名称
+                'buttonText': '浏览',  // 按钮上的文字
+                'fileTypeDesc': '图片类型', //出现在上传对话框中的文件类型描述
+                'fileTypeExts': '*.jpg;*.jpeg;*.png;*.gif;*.bmp', //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+                'swf': '../Js/uploadify/uploadify.swf',
+                'uploader': 'Handler/Photo.ashx'
+            });
+
+            setTimeout(function () { $("#file_upload-queue").css("height", (getWinH() - 200) + "px"); }, 100);
+        });
+
+        function upload() {
+            if ($(".uploadify-queue-item").length <= 0) {
+                alertInfo("请选择您要上传的图片！");
+                return;
+            }
+            var data = { 'action': 'addPic', cid: $("#selCate").val() }
+            var token = "sFLZjaeZ1XrC6KsYSGRA5NIU42F9o/8baZ52K4Kkk1Q2UtmoO6jv2A== is Not IE";
+            if (token.length > 0) {
+                data.token = token
+            }
+            $('#file_upload').uploadify('settings', 'formData', data);
+            $('#file_upload').uploadify('upload', '*');
+        }
+    </script>
+
+    <script>setSelectNav("ul.nav");</script>
+</html>

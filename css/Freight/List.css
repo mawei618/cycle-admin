@@ -1,0 +1,462 @@
+#section_temp
+{
+    border: 1px solid #D5D5D5;
+}
+#postage-tpl .setting
+{
+    color: rgb(64, 64, 64);
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 1000px;
+    z-index: 1000;
+}
+#postage-tpl .setting a
+{
+    color:#0083d4;
+}
+#postage-tpl .setting a:hover
+{
+    color:#ff5500;
+}
+#postage-tpl .setting input
+{
+    vertical-align: middle;
+}
+
+#postage-tpl .setting .input-readonly
+{
+    border: 1px solid #7F9DB9;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+#postage-tpl .setting h2
+{
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    margin: 20px 0 10px 20px;
+    border-bottom: 1px dotted #ddd;
+}
+#postage-tpl .setting .field-note
+{
+    color: rgb(128, 128, 128);
+}
+
+#postage-tpl .setting .form-elem
+{
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-left: 7em;
+}
+#postage-tpl .setting .form-elem .input-s-txt{ width: 40px}
+#postage-tpl .setting .form-elem p{ line-height: 32px;}
+#postage-tpl .setting .input-address
+{
+    width: 30em;
+}
+#postage-tpl .setting .label-like
+{
+    float: left;
+    margin-left: -7em;
+    text-align: right;
+    width: 7em;
+    height: 32px;
+    line-height: 32px;
+}
+#postage-tpl .setting .express .section
+{
+    margin-bottom: 8px;
+}
+#postage-tpl .setting .postage-detail
+{
+    background: #E6F4F5;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    padding:15px;
+}
+
+#postage-tpl .setting .postage-detail .default
+{
+    background-color: rgb(243, 254, 237);
+    line-height: 32px;
+    margin-top: 5px;
+    padding:10px;
+}
+#postage-tpl .setting .postage-detail .default input
+{
+    width: 6em;
+}
+#postage-tpl .setting .tbl-except
+{
+    margin-top: 10px;
+}
+#postage-tpl .setting .tbl-except .col-start, #postage-tpl .setting .tbl-except .col-postage, #postage-tpl .setting .tbl-except .col-plus, #postage-tpl .setting .tbl-except .col-postageplus, #postage-tpl .setting .tbl-except .col-wayDay
+{
+    width: 80px;
+}
+#postage-tpl .setting .tbl-except .col-action
+{
+    width: 50px;
+}
+#postage-tpl .setting .tbl-except th, #postage-tpl .setting .tbl-except td
+{
+    border-bottom: 1px solid #D5D5D5;
+    border-top-style: solid;
+    border-top-width: 0;
+    text-align: center;
+}
+#postage-tpl .setting .tbl-except th
+{
+    background-color: rgb(245, 245, 245);
+    font-weight: 400;
+    height: 32px;
+}
+#postage-tpl .setting .tbl-except td
+{
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+#postage-tpl .setting .tbl-except .cell-area
+{
+    text-align: left;
+    width: 500px;
+}
+#postage-tpl .setting .tbl-except .edit
+{
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+}
+#postage-tpl .setting .tbl-except .area-group
+{
+    display: block;
+    display: inline-block;
+    width: 420px;
+    vertical-align: middle;
+}
+#postage-tpl .setting .tbl-except .area-group input
+{
+    margin-right: 5px;
+}
+#postage-tpl .setting .tbl-attach
+{
+    line-height: 24px;
+    margin-top: 5px;
+}
+#postage-tpl .setting .tbl-except .input-text
+{
+    text-align: right;
+    width: 4em;
+}
+#postage-tpl .setting .tbl-except .input-readonly
+{
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+#postage-tpl .setting .input-error
+{
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+#postage-tpl .setting .cod-detail
+{
+    padding-left: 18px;
+}
+#postage-tpl .setting .cod-detail li
+{
+    margin-bottom: 8px;
+}
+#postage-tpl .setting .service-fee
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-left: 4em;
+}
+#postage-tpl .setting .service-fee .label-like
+{
+    margin-left: -4em;
+    width: 4em;
+}
+#postage-tpl .setting .supplier-corp
+{
+    padding-left: 7em;
+}
+#postage-tpl .setting .supplier-corp .label-like
+{
+    float: left;
+    margin-left: -7em;
+    width: 7em;
+}
+#postage-tpl .setting .supplier-service
+{
+    padding-left: 9em;
+}
+#postage-tpl .setting .supplier-service .label-like
+{
+    float: left;
+    margin-left: -9em;
+    width: 9em;
+}
+#postage-tpl .setting .supplier-service .entity, #postage-tpl .setting .supplier-corp .entity
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+#postage-tpl .setting .supplier-service .entity p, #postage-tpl .setting .supplier-corp .entity p
+{
+    float: left;
+    line-height: 24px;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+#postage-tpl .setting .btns
+{
+    text-align: center;
+}
+#postage-tpl .setting span.msg
+{
+    margin-right: 3px;
+}
+#postage-tpl .setting span.msg:after
+{
+    display: none;
+}
+#postage-tpl .setting span.error, #postage-tpl .setting span.stop
+{
+    display: inline-block;
+    float: none;
+}
+#postage-tpl .setting p.msg
+{
+    margin-top: 5px;
+}
+#postage-tpl .batch
+{
+    line-height: 24px;
+    margin-left: 6px;
+}
+.dialog-batch .btns
+{
+    padding-top: 10px;
+    text-align: center;
+}
+.dialog-batch button
+{
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+}
+.dialog-batch .ks-ext-close
+{
+    font-size: 10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.clearfix:after
+{
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+.styblock
+{
+    display: block;
+}
+.citys span
+{
+    line-height: 2;
+    margin-right: 2px;
+}
+.dialog-areas li
+{
+    overflow-x: visible;
+    overflow-y: visible;
+}
+.dcity
+{
+    display: block;
+    vertical-align: middle;
+    z-index: 1;
+}
+.ecity
+{
+    float: left;
+    height: 30px;
+    margin-right: 1px;
+    padding-right: 8px;
+    position: relative;
+    width: 80px;
+}
+.gcity, .province-list
+{
+    display: inline-block;
+}
+.province-list
+{
+    width: 450px;
+}
+.trigger
+{
+    cursor: pointer;
+    height: 8px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    width: 8px;
+}
+.dialog-areas li span.areas
+{
+    display: inline-block;
+    margin-right: 3px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 0;
+    padding-top: 4px;
+}
+.showCityPop
+{
+    z-index: 55556;
+}
+.showCityPop .citys
+{
+    display: block;
+    z-index: 55900;
+}
+.checkbox
+{
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    vertical-align: middle;
+}
+.dialog-areas label
+{
+    margin-bottom: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 0;
+}
+.check_num
+{
+    color: rgb(255, 102, 0);
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+.default .j_sellerBearFrePrice
+{
+    text-align: left;
+}
+.select-by-custom .section
+{
+    margin-left: 20px;
+}
+
+
+
+#postage-tpl .manage-list
+{
+    color: #404040;
+    margin: 0 auto;
+     
+}
+#postage-tpl .manage-list
+{
+    color: #404040;
+}
+#postage-tpl .manage-list .link-help
+{
+    float: right;
+    line-height: 25px;
+}
+#postage-tpl .manage-list .section
+{
+    margin-top: 10px;
+    border-color: #797979;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+}
+#postage-tpl .manage-list .tbl-prefix
+{
+    background-color: #E8F2FF;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #797979;
+    border-right: 1px solid #797979;
+}
+#postage-tpl .manage-list .tbl-prefix .meta
+{
+    color: #999;
+    float: right;
+    font-size: 14px;
+}
+#postage-tpl .manage-list .tbl-head
+{
+    position: relative;
+}
+ 
+#postage-tpl .manage-list .col-express, #postage-tpl .manage-list .col-starting, #postage-tpl .manage-list .col-postage, #postage-tpl .manage-list .col-plus
+{
+    width: 90px;
+}
+#postage-tpl .col-area
+{
+    width: 500px;
+}
+#postage-tpl .manage-list th
+{
+    background-color: #F5F5F5;
+    font-weight: 400;
+}
+#postage-tpl .manage-list th, #postage-tpl .manage-list td
+{
+    border-color: #797979;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    text-align: center;
+    height: 46px;
+}
+#postage-tpl .manage-list .entity
+{
+    margin-top: -1px;
+    /*max-height: 190px;
+    overflow-y: auto;*/
+    width: 100%;
+}
+.new_entity{overflow-y:auto;}
+#postage-tpl .manage-list table
+{ 
+    table-layout: fixed;
+    width: 100%;
+}
+#postage-tpl .manage-list th, #postage-tpl .manage-list td
+{
+    border-color: #797979;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    text-align: center;
+}
+#postage-tpl .manage-list .cell-area
+{
+    padding: 0 5px;
+    text-align: left;
+}
+.view{ text-align:right; margin-top :5px; margin-bottom :5px;}
+
+.div-none{padding:20px;text-align:center;}
+#postage-tpl .J_Title{ font-size: 14px;font-weight: 400;}
+#postage-tpl .J_Delete{ font-size: 12px; color: #3366cc}

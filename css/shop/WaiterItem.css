@@ -1,0 +1,47 @@
+.recommend-msg {
+    background-color: #FFFEE2;
+    border: 1px solid #FFCA80;
+    height: 12px;
+    line-height: 14px;
+     
+    padding: 8px;
+      margin-bottom: 30px;
+    margin-top: 10px;
+}
+.recommend-msg h4 {
+    float: left;
+    font-weight: 100;
+    width: 60px;
+}.recommend-msg ul {
+    color: #404040;
+    float: left;
+    overflow: hidden;
+    width: 690px;
+}
+.recommend-msg li {
+    display: block;
+    float: left;
+    margin-right: 12px;
+    width: 150px;
+}
+.recommend-msg li strong {
+    color: #FF6600;
+}
+.data-list .trigger {
+    background: url("images/do_together.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+}
+  .data .recommended {
+    color: #FF0000;
+} 
+.data-list .with-sid td {
+    border-bottom: 1px solid #DDDDDD;
+   
+   
+}

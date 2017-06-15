@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>在线客服</title>
+        <script type="text/javascript" language="javascript">
+            var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
+        </script>
+        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+        <link href="../css/Product/GoodsProduct.css" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/WaiterItem.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/pagination.css" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/validator.css" rel="stylesheet" type="text/css" />
+    
+        <script>
+            $(function () {
+                var href = window.location.href
+                var index = href.indexOf('?');
+                if (index == -1) {
+                    index = href.length;
+                }
+                href = href.substring(0, index);
+    
+                if (href.indexOf("Order/DeliverGoods.html") != -1) {
+                    href = $("#SendOrder").attr("href");
+                }
+                href = href.replace("aspx", "html");
+                var oldhref = "";
+                $(".shop-left ul li a").each(function (i) {
+                    oldhref = $(this).attr("href");
+                    index = oldhref.indexOf('?');
+                    if (index == -1) {
+                        index = oldhref.length;
+                    }
+                    oldhref = oldhref.substring(0, index);
+                    if (oldhref == href) {
+                        $(this).parent().addClass("select");
+                        $(this).css("color", "#ffffff");
+                    }
+                });
+    
+                //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
+                //    if (data.status) {
+                //        var li = $("ul[name='shop']").find("li:eq(0)");
+                //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
+                //    }
+                //    $(".shop-left li").bind("mouseover", function () {
+                //        if ($(this).hasClass("select")) {
+                //            $(this).find("a").css("text-decoration", "underline");
+                //            return;
+                //        }
+                //        $(this).addClass("hover");
+    
+                //    });
+                //    $(".shop-left li").bind("mouseout", function () {
+                //        $(this).removeClass("hover");
+                //        $(this).find("a").css("text-decoration", "none");
+                //    });
+    
+                //}, "json");
+            });
+        </script>
+    </head>
+
+    <body>
+        
+    <!--top begin-->
+    <div class="top">
+        <div class="content">
+            <div class="fl my-headLogo">
+                <a href="/Shop/MyAccount.html">
+                    <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                </a>
+            </div>
+            <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+            <div class="my-headTopInfor">
+                <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                    &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                    <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+            </div>
+    
+            <div class="fr drops">
+                <div class="dropdown">
+                    <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                    <div class="trancelate">
+                        <ul id="langs">
+                            <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top end-->
+        <div class="page">
+            <div class="wrap">
+                <div class="shop-left">
+                    <div class="item-title">
+                        <h3>交易管理</h3>
+                    </div>
+                    <ul>
+                        <li><a href="http://member.wdj360.com/Order/OrderList.html">已卖出商品</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/MyAccount.html">我的账户</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/ExchangeGood.html">换货管理</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/ReturnGood.html">退货管理</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/evaluate.html">评价管理</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>物流管理</h3>
+                    </div>
+                    <ul>
+                        <li><a id="SendOrder" href="http://member.wdj360.com/Order/WaitOrder.html">发货</a></li>
+                        <li><a href="http://member.wdj360.com/Freight/List.html">运费模板</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>商品管理</h3>
+                    </div>
+                    <ul>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
+                        <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
+                        <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
+                       
+                    </ul>
+                    <div class="item-title">
+                        <h3>店铺管理</h3>
+                    </div>
+                    <ul name="shop">
+                        <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
+    		            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
+                    </ul>
+                </div>
+                <div class="shop-right">
+                    
+                <div class="data-list data-list-goods">
+                    <form id="formModel" data-id="0" style="display: none;">
+                        <div id="trade-search-box">
+                            <table style="width: 100%;" class="editTable">
+                                <tr>
+                                    <td class="ltd">账号：</td>
+                                    <td>
+                                        <input name="number" id="number" onkeyup="this.value=this.value.replace(/[^\d{1-9}{1}\d{0-9}]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d{1-9}{1}\d{0-9}]/g,'')" maxlength="20" type="text" class="w150" /></td>
+                                    <td class="ltd">显示名称：</td>
+                                    <td><input name="showName" id="showName" maxlength="5" type="text"  class="w150"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="ltd">类型：</td>
+                                    <td>
+                                        <select name="waiterTypeID" id="waiterTypeID">
+                                            <option value="4">手机QQ客服</option>
+                                            <option value="1">QQ客服</option>
+                                        </select>
+                                    </td>
+                                    <td class="ltd">真实姓名：</td>
+                                    <td><input name="name" id="name" maxlength="5" type="text" class="w150"/></td>
+                                </tr>
+                                <tr>
+                                    <td class="ltd">排序：</td>
+                                    <td>
+                                        <input name="orderNo" id="orderNo" onkeyup="this.value=this.value.replace(/[^\d{1-9}{1}\d{0-9}]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d{1-9}{1}\d{0-9}]/g,'')" type="text" value="0"  maxlength="2" class="w150"/><strong class="red">(必须是数字)</strong>
+                                    </td>
+                                    <td class="ltd">是否主客服：</td>
+                                    <td>
+                                        <label><input type="checkbox" id="main" name="main" /></label>
+                                        <strong class="red">(只存在一个主客服)</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align: center;">
+                                        <input type="button" value="保存" id="save" class="btn btn-corOrange btn-ts" />
+                                        <input type="button" value="取消" onclick="cancel();" class="btn btn-corGrey btn-ts" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+            
+                    <div id="J_DataTable" class="bd">
+                        <div class="search-form" style="text-align: center;">
+                            <div style="text-align: left;">
+                                <button class="btn btn-corYellow btn-ts" onclick="addModel();">添加</button>
+                            </div>
+                            <form style="margin-bottom: 20px;">
+                                <table class="editTable">
+                                    <tr>
+                                        <td class="ltd">名称：</td>
+                                        <td><input type="text" maxlength="20" name="name" id="searchName" value="" /></td>
+                                        <td class="ltd">类型：</td>
+                                        <td>
+                                            <select name="type" id="searchType">
+                                                <option value="">全部</option>
+                                                <option value="4">手机QQ客服</option>
+                                                <option value="1">QQ客服</option>
+                                            </select>
+                                        </td>
+                                        <td class="ltd"><button class="btn btn-ts btn-corRed" type="submit">搜索</button></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div id="ContentPlaceHolder_listData" class="list-head">
+                            <table>
+                                <colgroup>
+                                    <col width="1">
+                                    <col width="250">
+                                    <col width="200">
+                                    <col width="200">
+                                    <col width="130">
+                                    <col width="200">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>账号</th>
+                                        <th>真实姓名</th>
+                                        <th>显示名称</th>
+                                        <th>类型</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <table>
+                            <colgroup>
+                                <col width="1">
+                                <col width="250">
+                                <col width="200">
+                                <col width="200">
+                                <col width="130">
+                                <col width="200">
+                            </colgroup>
+                            <tbody class="data">
+                                <tr class="empty-data" style='display: '>
+                                    <td colspan="7">没有推荐数据</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="ContentPlaceHolder_pnPage" class="digg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="bottom">
+         <div class="content">
+            <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+         </div>
+     </div>
+    <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+    </body>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../lib/Common.js"></script>
+
+    <script type="text/javascript" src="../lib/jquery.pagination.js"></script>
+    <script type="text/javascript" src="../lib/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../js/shop/WaiterItem.js"></script>
+
+</html>

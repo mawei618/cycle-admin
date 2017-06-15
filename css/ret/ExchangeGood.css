@@ -1,0 +1,626 @@
+
+
+#trade-search-box
+{
+    margin: 5px auto 10px;
+    padding-right: 10px;
+}
+#trade-search-box table
+{
+    margin-left: 10px;
+}
+#trade-search-box td.single-col
+{
+    width: 300px;
+}
+
+#trade-search-box td.double-cols
+{
+    width: 500px;
+}
+#trade-search-box td
+{
+    padding: 4px 5px;
+}
+#trade-search-box label
+{
+    padding: 0px 0px 0px 45px;
+}
+#trade-search-box td input
+{
+    height: 18px;
+    line-height: 18px;
+    margin-left: 4px;
+    vertical-align: middle;
+    width: 140px;
+}
+
+#trade-search-box td select
+{
+ width: 152px;
+}
+
+#trade-search-box td .Wdate
+{
+    /*width: 85px;*/
+}
+
+#trade-search-box td.double-cols select
+{
+    width: 48px;
+}
+#trade-search-box td.double-cols input.minute
+{
+    margin-left: 2px;
+    width: 18px;
+}
+
+#trade-search-box .tool-toggle
+{
+    background: url("../../images/toggle_bg.gif") no-repeat scroll 0 -80px rgba(0, 0, 0, 0);
+    display: block;
+    height: 20px;
+    margin: 0 auto;
+    outline: medium none;
+    text-indent: -999px;
+    width: 685px;
+}
+a
+{
+    color: #666;
+    text-decoration: none;
+}
+a:hover
+{
+    color:#ff5500;
+}
+.item-list
+{
+    clear: both;
+    color: #808080;
+    margin: 2px auto 10px;
+    position: relative;
+}　
+.clearfix:after
+{
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.clearfix:after
+{
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}　
+.item-list-tabs li
+{
+    background: url("../../images/tabview_bg.gif") no-repeat scroll 0 6px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    float: left;
+    height: 27px;
+    line-height: 21px;
+    margin-right: 3px;
+    padding-top: 8px;
+    position: relative;
+    text-align: center;
+    width: 130px;
+}　
+
+.item-list .item-list-bd
+{
+    border-top: 1px solid #AED2FF;
+    clear: both;
+    left: 0;
+    position: relative;
+    z-index: 8;
+}
+
+
+
+.item-list .item-list-bd table
+{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: inherit;
+}
+.item-list-col0
+{
+    width: 25px;
+}
+.item-list-col1
+{
+    width: auto;
+}
+.item-list-col2
+{
+    width: 65px;
+}
+.item-list-col3
+{
+    width: 40px;
+}
+.item-list-col4
+{
+    width: 65px;
+}
+.item-list-col6
+{
+    width: 165px;
+}
+.item-list-col7
+{
+    width: 100px;
+}
+.item-list-col8
+{
+    width: 102px;
+}
+.item-list-col9
+{
+    width: 55px;
+}
+.item-list-bd th
+{
+    /*background: url("/Themes/Green/Css/Order/images/itemlist_bg.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);*/
+    border-bottom: 1px solid #AEC7E5;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    height: 29px;
+    text-align: center;
+}
+.item-list .act td
+{
+    padding: 2px 0 0;
+}
+.item-list td
+{
+    line-height: 130%;
+    overflow: hidden;
+    padding: 8px 5px;
+    text-align: center;
+}
+.item-list .operations
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-color: #DEDEE0;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    text-align: left;
+}
+.item-list .all-selector, .item-list .selector
+{
+    margin: 0 8px 0 6px;
+}
+.item-list .operations label
+{
+    color: #404040;
+    margin-right: 18px;
+}
+.item-list .operations a
+{
+    padding: 0 10px;
+}
+
+.item-list .operations .show-hidden-orders
+{
+    color: #3366CC;
+    margin-left: 25px;
+}
+.item-list .operations label
+{
+    color: #404040;
+    margin-right: 18px;
+}
+.item-list .operations .show-hidden-orders input
+{
+    margin-right: 5px;
+}
+.order tr.sep-row td
+{
+    border-bottom-color: #D4E7FF;
+}
+
+
+.success-order tr.sep-row td, .closed-order tr.sep-row td
+{
+    border-bottom-color: #E6E6E6;
+}
+
+
+
+.order .sep-row td
+{
+    border-bottom: 1px solid #B4D5FF;
+    padding: 5px 0 !important;
+}
+.order-hd
+{
+    background: none repeat scroll 0 0 #E8F2FF;
+    color: #404040;
+}
+
+
+tr.order-hd td
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #B4D5FF #B4D5FF #EEEEEE;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px 0;
+    border-color: #D4E7FF #D4E7FF #EEEEEE;
+}
+.order-hd .selector
+{
+    float: left;
+}
+.order-hd .basic-info
+{
+    float: left;
+    text-align: left;
+}
+.order-hd .basic-info .order-num
+{
+    display: inline-block;
+    width: 260px;
+}
+.order-hd .more-info
+{
+    float: right;
+    padding: 0 8px 0 15px;
+}
+.memo-flag
+{
+    left: 0;
+    top: -1px;
+}
+.memo-flag
+{
+    margin-left: 5px;
+    outline: medium none;
+    position: relative;
+    top: 2px;
+}
+fieldset, img
+{
+    border: medium none;
+}
+.order .order-item td
+{
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.order .item
+{
+    border-left: 1px solid #D4E7FF;
+}
+.order-item td
+{
+    padding: 10px;
+    vertical-align: top;
+}
+.order-item .item .pic-info
+{
+    float: left;
+    margin-right: 5px;
+}
+.order-item .pic-info .pic
+{
+    border: medium none;
+    overflow: hidden;
+}
+.s50, .s50 a
+{
+    height: 50px;
+    width: 50px;
+}
+.pic a
+{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.pic a img
+{
+    vertical-align: middle;
+}
+.s50 img
+{
+}
+.s50 img
+{
+    max-height: 50px;
+    max-width: 50px;
+}
+.item-list .order-item .item .txt-info
+{
+    display: inline;
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    width: 226px;
+    word-wrap: break-word;
+}
+.order-item .item .txt-info
+{
+    line-height: 18px;
+    margin-left: 55px;
+    text-align: left;
+}
+.order-item .item .props, .order-item .item .misc
+{
+    width: auto;
+}
+.order-item .item .props span
+{
+    margin-right: 15px;
+    color:#999;
+}
+
+.order-item td.price, .order-item td.num, .order-item td.contact .name, .order-item td.contact .cell_number, .order-item td.trade-status .wait
+{
+    color: #000000;
+}
+.order .order-item td
+{
+    border-bottom: 1px solid #EEEEEE;
+}
+.item-list-bd .price
+{
+    text-align: center;
+}
+.item-list .price
+{
+    padding-right: 5px;
+    text-align: center;
+}
+.order-item .price
+{
+    padding-right: 5px;
+    text-align: center;
+}
+.order-item .price, .order-item .num
+{
+    color: #404040;
+}
+.order-item td.num
+{
+    font-weight: bold;
+    overflow: visible;
+}
+.order-item td.trouble
+{
+    cursor: pointer;
+}
+.order-item td.trouble
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.order .order-item td.order-price, .order .order-item td.contact, .order .order-item td.trade-status
+{
+    border-bottom: 1px solid #D4E7FF;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+}
+.order-item td.order-price, .order-item td.contact, .order-item td.remark, .order-item td.trade-status
+{
+    vertical-align: top !important;
+}
+td.contact a.nickname
+{
+    word-wrap: break-word;
+}
+td.trade-status a, td.remark a
+{
+    display: block;
+    margin: 2px auto;
+}
+td.trade-status .status
+{
+    font-weight: normal;
+}
+.trade-status .closed
+{
+    color: #808080;
+}
+.trade-status .wait
+{
+    color: #404040;
+}
+
+.order-item td.order-price, .order-item td.contact, .order-item td.remark, .order-item td.trade-status
+{
+    vertical-align: top !important;
+}
+tr.order-item .order-price
+{
+    line-height: 18px;
+    padding: 10px 0 5px;
+    vertical-align: middle;
+}
+.order-item td.order-price strong
+{
+    color: #404040;
+    font-size: 12px;
+    font-weight: bold;
+}
+.order .order-item .order-price .post-info
+{
+    line-height: 18px;
+}
+.order-item .order-price .post-info
+{
+    color: #808080;
+    line-height: normal;
+}
+.item-list .order .modify-price
+{
+    display: block;
+}
+td.order-price a.modify-price
+{
+    display: block;
+    margin: 2px auto;
+}
+
+.order .order-item td.remark
+{
+    border-bottom: 1px solid #D4E7FF;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #D4E7FF;
+}
+.order-item td.remark
+{
+    padding: 8px 0;
+}
+.order tr.last td
+{
+    border-bottom: 1px solid #D4E7FF;
+}
+.order tr.last td
+{
+    border-bottom: 1px solid #D4E7FF;
+}
+.order tr.last td
+{
+    border-bottom: 1px solid #D4E7FF;
+}
+.order tr.last td
+{
+    border-bottom: 1px solid #D4E7FF;
+}
+.success-order .order-hd, .closed-order .order-hd
+{
+    background: none repeat scroll 0 0 #F3F3F3;
+}
+.success-order .order-hd td, .closed-order .order-hd td
+{
+    border-color: #E6E6E6 #E6E6E6 #EEEEEE;
+}
+.success-order tr.last td, .closed-order tr.last td
+{
+    border-bottom: 1px solid #E6E6E6;
+}
+.success-order .item, .closed-order .item
+{
+    border-left-color: #E6E6E6;
+}
+.success-order .order-item td.order-price, .success-order .order-item td.contact, .success-order .order-item td.trade-status, .closed-order .order-item td.order-price, .closed-order .order-item td.contact, .closed-order .order-item td.trade-status
+{
+    border-bottom: 1px solid #E6E6E6;
+}
+.success-order .order-item td.remark, .closed-order .order-item td.remark
+{
+    border-bottom: 1px solid #E6E6E6;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #E6E6E6;
+}
+.success-order .order-hd, .closed-order .order-hd
+{
+    background: none repeat scroll 0 0 #F3F3F3;
+}
+.success-order .order-hd td, .closed-order .order-hd td
+{
+    border-color: #E6E6E6 #E6E6E6 #EEEEEE;
+}
+.item-list .unfound-results
+{
+    padding: 10px 0 200px;
+}
+.item-list .unfound-results .attention
+{
+    background: url("../../images/order/T1MeApXjViXXbKu7Ha-22-22.png") no-repeat scroll 24px 15px #FFEADF;
+    border: 1px solid #FDB08E;
+    color: #2E2E2E;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 18px 24px 18px 52px;
+    text-align: left;
+}
+.item-list .unfound-results a
+{
+    margin: 0 6px;
+}
+.memo-popup {
+background: #FFFCF3;
+border: 1px solid #F7E4A5;
+padding: 8px 10px 5px 10px;
+display: none;
+width: 170px;
+z-index: 99;
+}
+a:hover{ text-decoration:none;}
+
+.trade-status a{color:#0083d4}
+.trade-status a:hover{color:#3498db}
+
+
+/*****评价管理******/
+.evaluate-tb{
+    border:1px solid #ccc;
+    border-bottom:0;
+    width: 100%;
+}
+.evaluate-tb th{
+    height:40px;
+    background:#e9e9e9;
+    border-bottom:1px solid #ccc;
+    font-weight:400;
+}
+.evaluate-tb th.shop-info{
+    width:200px;
+}
+.evaluate-tb th.shop-score{
+    width:160px;
+}
+.evaluate-tb th.shop-pj{
+    width:350px;
+}
+.evaluate-tb tr{
+    border-bottom:1px solid #ccc;
+}
+.evaluate-tb td{
+    padding:20px 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+.grade-star {
+    width: 80px;
+    height: 22px;
+    margin: 10px auto 0;
+    background: url(../../images/commentsListIcons1.png) no-repeat;
+    _background: url(../../images/commentsListIcons1.png) no-repeat;
+}
+.grade-star.g-star5 {
+    background-position: 0 0;
+}
+.grade-star.g-star4 {
+    background-position: -16px 0;
+}
+.grade-star.g-star3 {
+    background-position: -32px 0;
+}
+.grade-star.g-star2 {
+    background-position: -48px 0;
+}
+.grade-star.g-star1 {
+    background-position: -64px 0;
+}

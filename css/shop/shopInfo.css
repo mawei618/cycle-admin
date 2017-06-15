@@ -1,0 +1,207 @@
+
+.form-info .ml
+{
+    overflow: hidden;
+    width: 100%;
+}
+.form-info li
+{
+    margin: 0 0 8px;
+    padding-top: 6px;
+}
+.form-info .item-name
+{
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    text-align: right;
+    width: 120px;
+}
+.form-info .item-name em
+{
+    color: #FF0000;
+    font-style: normal;
+}
+
+.form-info .shop-photo
+{
+    float: left;
+    position:relative;
+    width: 452px;
+}
+.form-info .shop-pic
+{
+    display: block;
+    height: 80px;
+    margin-bottom: 10px;
+    width: 80px;
+}
+fieldset, img
+{
+    border: 0 none;
+}
+.form-info .upload-con
+{
+    display: block;
+    margin-left:100px;
+    overflow: hidden;
+    width: 100%;
+}
+.form-info .info-tip
+{
+    background: none repeat scroll 0 0 #FFE1E1;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-top: 2px;
+    padding: 2px 10px 2px 6px;
+}
+.form-info .info-tip i
+{
+    background: url("../../images/shop/info-tip-i.png") no-repeat scroll 0 -95px;
+    display: block;
+    float: left;
+    height: 12px;
+    margin: 5px 6px 0 0;
+    width: 10px;
+}
+element.style
+{
+    left: 143px;
+    top: 161px;
+}
+.upload
+{
+    cursor: pointer;
+    height: 25px;
+    overflow: hidden;
+    position: absolute;
+    margin:5px auto; 
+}
+
+.upload .upload-btn
+{
+    background: url("../../images/shop/info-tip-i.png") no-repeat scroll 0 -46px;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 25px;
+    overflow: hidden;
+    width: 76px;
+}
+
+.upload .upload-btn em
+{
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 76px;
+    font-style: normal;
+}
+.simulate_upload
+{
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 76px;
+    filter: alpha(opacity=0);
+}
+.form-info .sh-category
+{
+    float: left;
+}
+.shop-photo a
+{
+    color: #333;
+    text-decoration: none;
+}
+.form-info .text1
+{
+    height: 20px;
+    line-height: 20px;
+    width: 196px;
+}
+.form-info .sh-style
+{
+    display: block;
+    float: left;
+}
+.form-info .location-detail
+{
+    display: block;
+    float: left;
+    width: 364px;
+}
+.form-info .text4
+{
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    width: 360px;
+}
+.form-info .source-item
+{
+    display: block;
+    float: left;
+    height: 50px;
+    overflow: hidden;
+}
+.form-info .source-item input
+{
+    display: block;
+    float: left;
+    margin-top: 3px;
+}
+.form-info .source-item label
+{
+    display: block;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 20px 0 2px;
+    width: 80px;
+}
+.form-info .ifshop input
+{
+    display: block;
+    float: left;
+    margin-top: 3px;
+}
+.form-info .ifshop label
+{
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 6px;
+}
+.form-info .ml2
+{
+    margin-left: 130px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.form-info .form-save
+{
+    background: url("../../images/shop/info-tip-i.png") no-repeat scroll 0 0;
+    border: 0 none;
+    color: #FFFFFF;
+    height: 23px;
+    width: 54px;
+}
+.form-info .form-save:hover
+{
+    cursor: pointer;
+}
+.form-info .source-item p
+{
+    height: 30px;
+    line-height: 30px;
+}

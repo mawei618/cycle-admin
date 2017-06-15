@@ -1,0 +1,296 @@
+.item-tab {
+border-bottom: solid 1px #add2fe;
+position: relative;
+}.item-tab ul {
+height: 27px;
+position: relative;
+left: 20px;
+top: 1px;
+}.item-tab .current {
+padding-top: 0;
+height: 27px;
+background: url(http://a.tbcdn.cn/app/trade/img/tabview_bg_flexible.png) no-repeat 0 -48px;
+}.item-tab ul li {
+float: left;
+height: 24px;
+padding-top: 3px;
+margin-right: 3px;
+cursor: pointer;
+background: url(http://a.tbcdn.cn/app/trade/img/tabview_bg_flexible.png) no-repeat 0 3px;
+}.item-tab .current a {
+height: 20px;
+padding-top: 7px;
+background: url(http://a.tbcdn.cn/app/trade/img/tabview_bg_flexible.png) no-repeat right -75px;
+color: #000;
+font-weight: bold;
+text-decoration: none;
+}
+.item-tab li a {
+background: url(http://a.tbcdn.cn/app/trade/img/tabview_bg_flexible.png) no-repeat right -24px;
+padding: 0 12px;
+float: left;
+height: 20px;
+padding-top: 4px;color: #111111 !important;
+} .item-subtab {
+background-position: 0 0;
+background-repeat: repeat-x;
+height: 36px;
+padding-left: 20px;
+}
+.item-subtab, .item-subtab .current, .item-subtab .current a {
+background-image: url(http://img07.taobaocdn.com/tps/i7/T1820tXm4aXXXXXXXX-400-95.png);
+}.item-subtab .current {
+background-position: 0 -38px;
+background-repeat: no-repeat;
+}
+.item-subtab, .item-subtab .current, .item-subtab .current a {
+background-image: url(http://img07.taobaocdn.com/tps/i7/T1820tXm4aXXXXXXXX-400-95.png);
+}
+.item-subtab li {
+float: left;
+height: 21px;
+line-height: 21px;
+margin-top: 10px;
+margin-right: 10px;
+}
+
+
+
+
+.item-subtab .current a {
+background-position: right -38px;
+color: #fff;
+}
+.item-subtab, .item-subtab .current, .item-subtab .current a {
+background-image: url(http://img07.taobaocdn.com/tps/i7/T1820tXm4aXXXXXXXX-400-95.png);
+}
+.item-subtab li a {
+margin-left: 5px;
+height: 21px;
+display: inline-block;
+padding-right: 5px;
+cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#trade-search-box
+{
+    margin: 5px auto 10px;
+    padding-right: 10px;
+}
+#trade-search-box table
+{
+    margin-left: 10px;
+}
+ 
+
+#trade-search-box td.double-cols
+{
+    width: 500px;
+}
+#trade-search-box td
+{
+    padding: 4px 5px;
+}
+#trade-search-box label
+{
+    padding: 0px 0px 0px 45px;
+}
+#trade-search-box td input
+{
+    height: 18px;
+    line-height: 18px;
+    margin-left: 4px;
+    vertical-align: middle;
+    width: 140px;
+}
+
+#trade-search-box td select
+{
+    height: 20px;
+    vertical-align: middle;
+    width: 140px;
+}
+
+#trade-search-box td .Wdate
+{
+    /*width: 75px;*/
+}
+
+#trade-search-box td.double-cols select
+{
+    width: 42px;
+}
+#trade-search-box td.double-cols input.minute
+{
+    margin-left: 2px;
+    width: 18px;
+}
+
+#trade-search-box td .search-btn, #trade-search-box td .stock-search-btn
+{
+    background: url("/Themes/Green/images/btn-top-writer.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    height: 24px;
+    padding: 2px 20px;
+    width: 70px;
+}
+
+#trade-search-box td .aslink
+{
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #0579C6;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+#trade-search-box .tool-toggle
+{
+    background: url("/Themes/Green/images/toggle_bg.gif") no-repeat scroll 0 -80px rgba(0, 0, 0, 0);
+    display: block;
+    height: 20px;
+    margin: 0 auto;
+    outline: medium none;
+    text-indent: -999px;
+    width: 685px;
+}
+
+
+
+
+
+.logis {
+width: 100%;color: #666;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}.logis .order-title {
+background-color: #E4F4F7;
+}
+user agent stylesheettr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}.logis tbody td {
+padding: 3px 10px;
+border: 1px solid #E4F4F7;
+vertical-align: top;
+}
+.logis .order-title .trigger
+{
+    float: left;
+padding: 8px 5px;
+    }
+.logis tr.order-title .order-number, .logis tr.order-title .order-date {
+float: left;
+padding: 2px 5px;
+}.orderdetail {
+padding-left: 60px;
+overflow: hidden;
+zoom: 1;
+ 
+}
+.orderdetail {
+padding: 0;
+text-align: left;
+}
+.orderdetail .pic {
+float: left;
+margin-right:30px;
+}
+.pic {
+}
+.s50, .s50 a {
+width: 50px;
+height: 50px;
+}.orderdetail .des {
+_float: left;
+margin-left: 0;
+_width: 80px;
+word-break: break-all;
+}.orderdetail .des a {
+line-height: 1.5!important;color: #333;
+word-break: break-all;
+}
+
+.orderdetail .des a:hover {
+color: #f60;
+text-decoration: underline;
+}
+.orderdetail .pic img {
+width: 50px;
+height: 50px;
+}
+.pic a img {
+vertical-align: middle;
+}
+.s50 img {
+max-width: 50px;
+max-height: 50px;
+}
+.orderdetail li.total {
+text-align: right;
+padding-top: 10px;
+}.logis .logis-info {
+vertical-align: top;
+line-height: 18px;
+}
+
+
+.logis-infoul li {
+display: block;
+min-height: 25px;
+}.logis .logis-info label.msg-lab {
+line-height: 25px;
+}
+.logis .logis-info label {
+float: left;
+width: 60px;
+}.logis .logis-info .info {
+display: block;
+float: left;
+width: 400px;
+ 
+color: #808080;
+}.logis tbody .acts td {
+padding: 0 10px;
+text-align: right;
+height: 40px;
+vertical-align: middle;
+}
+.logis-infoul:after, .logis-infoul li:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+
+.skin-blue .short-btn {
+background-position: 0 -25px;
+}
+ 

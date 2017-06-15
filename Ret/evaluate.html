@@ -1,102 +1,47 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1"><title>
-	评价管理
-</title>
-
+<head id="Head1">
+<title>评价管理</title>
 <script type="text/javascript" language="javascript">
 var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
 </script>
 
-<link href="http://misc.wdj360.com/member/default/Css/global.css?v=04" rel="stylesheet" type="text/css" />
-<link href="http://misc.wdj360.com/member/default/Css/shop/shopcenter.css?v=04" rel="stylesheet" type="text/css" />
-<link href="http://misc.wdj360.com/member/default/css/font-awesome.min.css?v=04" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/jquery-1.8.2.min.js?v=04"></script>
-
-<link href="http://misc.wdj360.com/member/default/Css/ret/ExchangeGood.css?v=04" rel="stylesheet" type="text/css" />
-<link href="http://misc.wdj360.com/member/default/Css/pagination.css?v=04" rel="stylesheet" type="text/css" />
-
-    <script>
-        $(function () {
-            var href = window.location.href
-            var index = href.indexOf('?');
-            if (index == -1) {
-                index = href.length;
-            }
-            href = href.substring(0, index);
-
-            if (href.indexOf("Order/DeliverGoods.html") != -1) {
-                href = $("#SendOrder").attr("href");
-            }
-            href = href.replace("aspx", "html");
-            var oldhref = "";
-            $(".shop-left ul li a").each(function (i) {
-                oldhref = $(this).attr("href");
-                index = oldhref.indexOf('?');
-                if (index == -1) {
-                    index = oldhref.length;
-                }
-                oldhref = oldhref.substring(0, index);
-                if (oldhref == href) {
-                    $(this).parent().addClass("select");
-                    $(this).css("color", "#ffffff");
-                }
-            });
-
-            //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
-            //    if (data.status) {
-            //        var li = $("ul[name='shop']").find("li:eq(0)");
-            //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
-            //    }
-            //    $(".shop-left li").bind("mouseover", function () {
-            //        if ($(this).hasClass("select")) {
-            //            $(this).find("a").css("text-decoration", "underline");
-            //            return;
-            //        }
-            //        $(this).addClass("hover");
-
-            //    });
-            //    $(".shop-left li").bind("mouseout", function () {
-            //        $(this).removeClass("hover");
-            //        $(this).find("a").css("text-decoration", "none");
-            //    });
-
-            //}, "json");
-        });
-    </script>
+<link href="../lib/global.css" rel="stylesheet" type="text/css"/>
+<link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../lib/pagination.css" rel="stylesheet" type="text/css"/>
+<link href="../css/ret/ExchangeGood.css" rel="stylesheet" type="text/css"/>
+<link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    
-<!--top begin-->
-<div class="top">
-    <div class="content">
-        <div class="fl my-headLogo">
-            <a href="/Shop/MyAccount.html">
-                <img src="http://misc.wdj360.com/Member/default/images/logo.png" /></a>
-        </div>
-        <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
-        <div class="my-headTopInfor">
-            <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
-                &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
-                <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
-            
-        </div>
+    <!--top begin-->
+    <div class="top">
+        <div class="content">
+            <div class="fl my-headLogo">
+                <a href="/Shop/MyAccount.html">
+                    <img src="http://misc.wdj360.com/Member/default/images/logo.png" /></a>
+            </div>
+            <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+            <div class="my-headTopInfor">
+                <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                    &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                    <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+                
+            </div>
 
-        <div class="fr drops">
-            <div class="dropdown">
-                <a href="#" title="">Language <i class="icon-angle-down"></i></a>
-                <div class="trancelate">
-                    <ul id="langs">
-                        <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
-                    </ul>
+            <div class="fr drops">
+                <div class="dropdown">
+                    <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                    <div class="trancelate">
+                        <ul id="langs">
+                            <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--top end-->
-
+    <!--top end-->
     <div class="page">
         <div class="wrap">
             <div class="shop-left">
@@ -120,83 +65,74 @@ var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back"
                 <div class="item-title">
                     <h3>商品管理</h3>
                 </div>
+
                 <ul>
                     <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
                     <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
                     <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
                     <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
                     <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
-                   
                 </ul>
                 <div class="item-title">
                     <h3>店铺管理</h3>
                 </div>
+
                 <ul name="shop">
-                    
-                    
-                    
                     <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
                     <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
                     <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
-		            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
+    	            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
                     <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
-                    
                     <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
                     <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
                 </ul>
             </div>
+
             <div class="shop-right">
-                
-   <div id="main-content">
-        <div id="trade-search-box">
-            <form action="/Ret/evaluate.aspx">
-            <table>
-                <tr>
-                    <td>
-                        <label class="">评分：</label>
-                        <span>
-                            <select id="reviewType" name="reviewType">
-                                <option value="-1">全部评分</option>
-                                <option  value="0">好评</option>
-                                <option  value="1">中评</option>
-                                <option  value="2">差评</option>
-                            </select>
-                        </span>
-                    </td>
-                    <td>
-                        <label class="">评价时间：</label>
-                        <span><input type="text" id="txtStartDate" value="" class="Wdate"  name="startDate" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}'})"> - <input value="" type="text" class="Wdate" id="txtEndDate" name="endDate" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d'})"></span>
-                    </td>
-                    <td><button type="submit" class="btn btn-corRed btn-ts ml20" id="searchData">搜索</button></td>
-                </tr>
-            </table>
-                </form>
-        </div>
+                <div id="main-content">
+                    <div id="trade-search-box">
+                        <form action="/Ret/evaluate.aspx">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label class="">评分：</label>
+                                        <span>
+                                            <select id="reviewType" name="reviewType">
+                                                <option value="-1">全部评分</option>
+                                                <option  value="0">好评</option>
+                                                <option  value="1">中评</option>
+                                                <option  value="2">差评</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <label class="">评价时间：</label>
+                                        <span><input type="text" id="txtStartDate" value="" class="Wdate"  name="startDate" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}'})"> - <input value="" type="text" class="Wdate" id="txtEndDate" name="endDate" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d'})"></span>
+                                    </td>
+                                    <td><button type="submit" class="btn btn-corRed btn-ts ml20" id="searchData">搜索</button></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
 
-        <div class="shop-right">
-            <table class="evaluate-tb">
-                <tr>
-                    <th class="shop-info">商品信息</th>
-                    <th class="shop-score">评分</th>
-                    <th class="shop-pj">评价</th>
-                    <th class="shop-people">评价人</th>
-                    <th class="shop-people">评价时间</th>
-                </tr>
-                             
-            </table>
-            <div id="ContentPlaceHolder_pnPage" class="digg">
-	
-        
-</div>
-        </div>
-       
-    </div>
-
+                    <div class="shop-right">
+                        <table class="evaluate-tb">
+                            <tr>
+                                <th class="shop-info">商品信息</th>
+                                <th class="shop-score">评分</th>
+                                <th class="shop-pj">评价</th>
+                                <th class="shop-people">评价人</th>
+                                <th class="shop-people">评价时间</th>
+                            </tr>
+                        </table>
+                        <div id="ContentPlaceHolder_pnPage" class="digg"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    
- <div class="bottom">
+        
+    <div class="bottom">
         <div class="content">
             <div class="bottominfo">
                 善宝分享商城
@@ -206,13 +142,60 @@ var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back"
         </div>
     </div>
 
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/jquery.cookie.js?v=04"></script>
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/trancelate.js?v=04"></script>
 </body>
-    
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/layer/layer/layer.min.js?v=04"></script>
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/Common.js?v=04"></script>
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/My97DatePicker/WdatePicker.js?v=04"></script>
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/jquery.pagination.js?v=04"></script>
+<script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+<script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+<script type="text/javascript" src="../lib/Common.js"></script>
+<script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../lib/jquery.pagination.js"></script>
+<script>
+    $(function () {
+        var href = window.location.href
+        var index = href.indexOf('?');
+        if (index == -1) {
+            index = href.length;
+        }
+        href = href.substring(0, index);
 
+        if (href.indexOf("Order/DeliverGoods.html") != -1) {
+            href = $("#SendOrder").attr("href");
+        }
+        href = href.replace("aspx", "html");
+        var oldhref = "";
+        $(".shop-left ul li a").each(function (i) {
+            oldhref = $(this).attr("href");
+            index = oldhref.indexOf('?');
+            if (index == -1) {
+                index = oldhref.length;
+            }
+            oldhref = oldhref.substring(0, index);
+            if (oldhref == href) {
+                $(this).parent().addClass("select");
+                $(this).css("color", "#ffffff");
+            }
+        });
+
+        //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
+        //    if (data.status) {
+        //        var li = $("ul[name='shop']").find("li:eq(0)");
+        //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
+        //    }
+        //    $(".shop-left li").bind("mouseover", function () {
+        //        if ($(this).hasClass("select")) {
+        //            $(this).find("a").css("text-decoration", "underline");
+        //            return;
+        //        }
+        //        $(this).addClass("hover");
+
+        //    });
+        //    $(".shop-left li").bind("mouseout", function () {
+        //        $(this).removeClass("hover");
+        //        $(this).find("a").css("text-decoration", "none");
+        //    });
+
+        //}, "json");
+    });
+</script>
 </html>
