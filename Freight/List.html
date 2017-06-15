@@ -1,0 +1,324 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>运费模板管理</title>
+        <script type="text/javascript" language="javascript">
+            var domain={"mall":"http://member.wdj360.com","wap":"http://m.wdj360.com","back":"http://admin.wdj360.com","font":"http://api.wdj360.com","fontService":"","front":"http://m.wdj360.com","img":"http://img.wdj360.com","app":"","misc":"http://misc.wdj360.com","themes":"/Themes/Green/","appid":"","secret":""};
+        </script>
+        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
+        <link href="../css/shop/shopcenter.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+        <link href="../css/Freight/List.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/pagination.css" rel="stylesheet" type="text/css" />
+    
+        <script>
+            $(function () {
+                var href = window.location.href
+                var index = href.indexOf('?');
+                if (index == -1) {
+                    index = href.length;
+                }
+                href = href.substring(0, index);
+    
+                if (href.indexOf("Order/DeliverGoods.html") != -1) {
+                    href = $("#SendOrder").attr("href");
+                }
+                href = href.replace("aspx", "html");
+                var oldhref = "";
+                $(".shop-left ul li a").each(function (i) {
+                    oldhref = $(this).attr("href");
+                    index = oldhref.indexOf('?');
+                    if (index == -1) {
+                        index = oldhref.length;
+                    }
+                    oldhref = oldhref.substring(0, index);
+                    if (oldhref == href) {
+                        $(this).parent().addClass("select");
+                        $(this).css("color", "#ffffff");
+                    }
+                });
+    
+                //$.post("/Shop/Handler/Commom.ashx", { Action: "IsExistsActivityByNow" }, function (data) {
+                //    if (data.status) {
+                //        var li = $("ul[name='shop']").find("li:eq(0)");
+                //        li.before("<li><a target='_blank' href='/Product/ProductManager.html?TimeId=" + data.data.TimeId + "'>" + data.data.activityName + "活动报名</a></li>");
+                //    }
+                //    $(".shop-left li").bind("mouseover", function () {
+                //        if ($(this).hasClass("select")) {
+                //            $(this).find("a").css("text-decoration", "underline");
+                //            return;
+                //        }
+                //        $(this).addClass("hover");
+    
+                //    });
+                //    $(".shop-left li").bind("mouseout", function () {
+                //        $(this).removeClass("hover");
+                //        $(this).find("a").css("text-decoration", "none");
+                //    });
+    
+                //}, "json");
+            });
+        </script>
+    </head>
+    <body>
+        
+    <!--top begin-->
+    <div class="top">
+        <div class="content">
+            <div class="fl my-headLogo">
+                <a href="/Shop/MyAccount.html">
+                    <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                </a>
+            </div>
+            <div class="fl my-headTopNav">
+                <a href="/index.html" title="返回首页">首页</a>
+                <a href="/Shop/insideletter.html" title="消息中心">消息中心</a>
+            </div>
+            <div class="my-headTopInfor">
+                <span>
+                                                       您好！&nbsp;
+                    <span id="MainTop_lblUserCode">15238203791</span>
+                    &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;
+                </span>
+                <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+            </div>
+            <div class="fr drops">
+                <div class="dropdown">
+                    <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                    <div class="trancelate">
+                        <ul id="langs">
+                            <span id="translateLoading">
+                                <img src="http://misc.wdj360.com/member/default/images/loading.gif">
+                                <p>Loading...</p>
+                            </span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top end-->
+        <div class="page">
+            <div class="wrap">
+                <div class="shop-left">
+                    <div class="item-title">
+                        <h3>交易管理</h3>
+                    </div>
+                    <ul>
+                        <li><a href="http://member.wdj360.com/Order/OrderList.html">已卖出商品</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/MyAccount.html">我的账户</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/ExchangeGood.html">换货管理</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/ReturnGood.html">退货管理</a></li>
+                        <li><a href="http://member.wdj360.com/Ret/evaluate.html">评价管理</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>物流管理</h3>
+                    </div>
+                    <ul>
+                        <li><a id="SendOrder" href="http://member.wdj360.com/Order/WaitOrder.html">发货</a></li>
+                        <li><a href="http://member.wdj360.com/Freight/List.html">运费模板</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>商品管理</h3>
+                    </div>
+                    <ul>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/ReleaseProduct.html">发布商品</a></li>
+                        <li><a href="http://member.wdj360.com/Product/SalesProduct.html">出售中的商品</a></li>
+                        <li><a href="http://member.wdj360.com/Product/GoodsProduct.html?searchType=0">仓库中的商品</a></li>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/Category.html">商品分类管理</a></li>
+                        <li><a target="_blank" href="http://member.wdj360.com/Product/ProductManager.html">商品批量管理</a></li>
+                    </ul>
+                    <div class="item-title">
+                        <h3>店铺管理</h3>
+                    </div>
+                    <ul name="shop">
+                        <li><a target="_blank" href="http://member.wdj360.com/Photo/List.html">图片空间</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/CompanyInfo.html">企业信息</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/ShopInfo.html">店铺基本设置</a></li>
+    		            <li><a href="http://member.wdj360.com/Product/RecommendProduct.html">店铺装修</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/WaiterItem.html">在线客服</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/addressEdit.html">地址管理</a></li>
+                        <li><a href="http://member.wdj360.com/Shop/insideletter.html">站内信</a></li>
+                    </ul>
+                </div>
+                <div class="shop-right">
+                <div>
+                    <button onclick="showFeigth();" class="btn btn-ts btn-corYellow">新增运费模板</button>
+                </div>
+                <div id="postage-tpl">
+                    <div class="manage-list">
+                        <div style='display: ' class="div-none">没有搜索到任何结果</div>
+                        <div class="">
+                            <div id="ContentPlaceHolder_pnPage" class="digg">
+            	       </div>
+                   </div>
+                </div>
+                <div class="setting hide">
+                    <h2 id="editText">新增运费模板</h2>
+                        <ul>
+                            <!--  模板名称设置  -->
+                            <li class="form-elem">
+                                <label class="label-like">
+                                    <span class="red">*</span> 模板名称：
+                                </label>
+                                <input type="text" data-id="0" autocomplete="off" maxlength="30" class="input-text input-address" value="" id="templateName" />
+                            </li>
+                            <!--  是否包邮设置  -->
+                            <li class="form-elem"><span class="label-like">包邮设置：</span>
+                                <p>
+                                    <input type="checkbox" id="isFullFree" />满
+                                    <input type="text" class="input-s-txt" id="fullNum" value="0" onkeyup="txtHelper.positiveInteger('#fullNum',1)" maxlength="4" />
+                                    <label>件包邮</label>
+                                </p>
+                            </li>
+                            <!--  区域限售  -->
+                            <li class="form-elem calc-method"><span class="label-like">区域限售：</span>
+                                <p>
+                                    <input type="checkbox" id="areaRestricted" /> 仅限运送区区域销售&nbsp;&nbsp;&nbsp;
+                                    <label class="field-note">勾选后商品只能在设置了运费的指定地区城市销售</label>
+                                </p>
+                            </li>
+                            <!-- 运费方式设置  -->
+                            <li class="form-elem express">
+                                <label class="label-like"><span class="red">*</span> 运送方式：</label>
+                                <p>
+                                    <span class="field-note">除指定地区外，其余地区的运费采用“默认运费”</span><span class="red">（运送方式必须是数字且最多保留两位小数）</span>
+                                </p>
+                                <table cellspacing="0" cellpadding="0" border="0" id="section_temp" style="display: none;">
+                                    <colgroup>
+                                        <col class="col-area">
+                                        <col class="col-start">
+                                        <col class="col-postage">
+                                        <col class="col-plus">
+                                        <col class="col-postageplus">
+                                        <col class="col-action">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>运送到</th>
+                                            <th>首件(件)</th>
+                                            <th>首费(元)</th>
+                                            <th>续件(件)</th>
+                                            <th>续费(元)</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="cell-area">
+                                                <div class="area-group">未添加地区</div>
+                                                <a onclick="showRegion(this);" title="编辑" class="edit" href="javascript:void(0);">编辑</a>
+                                            </td>
+                                            <td>
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="firstArticleKG" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}" onkeyup="txtHelper.positiveInteger(this,1)">
+                                            </td>
+                                            <td>
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="firstCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="txtHelper.Float2(this,0.00)" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">
+                                            </td>
+                                            <td>
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="continueArticleKG" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="txtHelper.positiveInteger(this,1)" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">
+                                            </td>
+                                            <td>
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="continueCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="txtHelper.Float2(this,0.00)" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">
+                                            </td>
+                                            <td>
+                                                <a class="J_DeleteRule" href="javascript:void(0);" onclick="delRow(this);">删除</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="section">
+                                    <p>
+                                        <input type="checkbox" class="J_Delivery" checked="checked" disabled="disabled" value="1" name="shippingMethod" id="shippingMethod1">
+                                        <label for="shippingMethod1">快递</label>
+                                    </p>
+                                    <div class="postage-detail">
+                                        <div class="entity">
+                                            <div class="default">默认运费：
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text " name="firstArticleKG" id="defaultfirstArticleKG" onkeyup="txtHelper.positiveInteger('#defaultfirstArticleKG',1)" maxlength="4" />件内，
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text " value="" name="firstCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="txtHelper.Float2(this,0.00)" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">元， 每增加
+                                                <input type="text" aria-label="每加件" maxlength="6" autocomplete="off" class="input-text" name="continueArticleKG" id="defaultcontinueArticleKG" onkeyup="txtHelper.positiveInteger('#defaultcontinueArticleKG',1)" maxlength="4">件， 增加运费
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="continueCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="txtHelper.Float2(this,0.00)" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">元
+                                                <div class="J_DefaultMessage"></div>
+                                            </div>
+                                            <div class="tbl-except"></div>
+                                            <div class="tbl-attach">
+                                                <div class="J_SpecialMessage"></div>
+                                                <a class="J_AddRule" href="javascript:void(0);" onclick="addArea(this)">为指定地区城市设置运费</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section" style="display: none;">
+                                    <p>
+                                        <input type="checkbox" class="J_Delivery" value="2" name="shippingMethod" id="shippingMethod2">
+                                        <label for="shippingMethod2">EMS</label>
+                                    </p>
+                                    <div class="postage-detail hide">
+                                        <div class="entity">
+                                            <div class="default">
+                                                                                                                                    默认运费：<input type="text" maxlength="6" autocomplete="off" class="input-text " name="firstArticleKG" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">件内，
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text " value="" name="firstCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">元， 每增加
+                                                <input type="text" aria-label="每加件" maxlength="6" autocomplete="off" class="input-text" name="continueArticleKG" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">件， 增加运费
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="continueCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">元
+                                                <div class="J_DefaultMessage"></div>
+                                            </div>
+                                            <div class="tbl-except"></div>
+                                            <div class="tbl-attach">
+                                                <div class="J_SpecialMessage"></div>
+                                                <a class="J_AddRule" href="javascript:void(0);" onclick="addArea(this)">为指定地区城市设置运费</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section" style="display: none;">
+                                    <p>
+                                        <input type="checkbox" class="J_Delivery" value="3" name="shippingMethod" id="shippingMethod3">
+                                        <label for="shippingMethod3">平邮</label>
+                                    </p>
+                                    <div class="postage-detail hide">
+                                        <div class="entity">
+                                            <div class="default">
+                                                                                                                                     默认运费：<input type="text" maxlength="6" autocomplete="off" class="input-text " name="firstArticleKG" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">件内，
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text " value="" name="firstCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">元， 每增加
+                                                <input type="text" aria-label="每加件" maxlength="6" autocomplete="off" class="input-text" name="continueArticleKG" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">件， 增加运费
+                                                <input type="text" maxlength="6" autocomplete="off" class="input-text" name="continueCharge" onkeypress="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onkeyup="if(!this.value.match(/^[\+]?\d*?\.?\d*?$/))this.value=this.t_value;else this.t_value=this.value;if(this.value.match(/^(?:[\+]?\d+(?:\.\d+)?)?$/))this.o_value=this.value" onblur="if(!this.value.match(/^(?:[\+]?\d+(?:\.\d+)?|\.\d*?)?$/))this.value=this.o_value;else{if(this.value.match(/^\.\d+$/))this.value=0+this.value;if(this.value.match(/^\.$/))this.value=0;this.o_value=this.value}">元
+                                                <div class="J_DefaultMessage"></div>
+                                            </div>
+                                            <div class="tbl-except"></div>
+                                            <div class="tbl-attach">
+                                                <div class="J_SpecialMessage"></div>
+                                                <a class="J_AddRule" href="javascript:void(0);" onclick="addArea(this)">为指定地区城市设置运费</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="btns">
+                            <button type="button" onclick="saveFreigth()" class="btn btn-ts btn-corOrange">保存并返回</button>
+                            <button type="button" onclick="hideFeigth();" class="btn btn-ts btn-corGrey">取消</button>
+                        </p>
+                    </div>
+                </div>
+                <div id="myRegion"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="content">
+            <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+</body>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../lib/Common.js"></script>
+
+    <script type="text/javascript" src="../lib/jquery.pagination.js"></script>
+    <script type="text/javascript" src="../js/Freight/List.js"></script>
+
+</html>

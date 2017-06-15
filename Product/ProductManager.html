@@ -1,48 +1,41 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1"><title>
-	商品批量操作
-</title>
-<link href="http://misc.wdj360.com/member/default/Css/global.css?v=04" rel="stylesheet" type="text/css" />
-<link href="http://misc.wdj360.com/member/default/Css/Photo/PicCenter.css?v=04" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/Jquery.js?v=04"></script>
-    
-<link href="http://misc.wdj360.com/member/default/Css/Product/ProductManager.css?v=04" rel="stylesheet" type="text/css" />
-<link href="http://misc.wdj360.com/member/default/Css/pagination.css?v=04" rel="stylesheet" type="text/css" />
+<head id="Head1">
+<title>商品批量操作</title>
+<link href="../lib/global.css" rel="stylesheet" type="text/css" />
+<link href="../lib/pagination.css" rel="stylesheet" type="text/css" />
+<link href="../css/Photo/PicCenter.css" rel="stylesheet" type="text/css" />
+<link href="../css/Product/ProductManager.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!--top begin-->
-    
-<!--top begin-->
-<div class="top">
-    <div class="content">
-        <div class="fl my-headLogo">
-            <a href="/Shop/MyAccount.html">
-                <img src="http://misc.wdj360.com/Member/default/images/logo.png" /></a>
-        </div>
-        <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
-        <div class="my-headTopInfor">
-            <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
-                &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
-                <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
-            
-        </div>
+    <div class="top">
+        <div class="content">
+            <div class="fl my-headLogo">
+                <a href="/Shop/MyAccount.html">
+                    <img src="http://misc.wdj360.com/Member/default/images/logo.png" /></a>
+            </div>
+            <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+            <div class="my-headTopInfor">
+                <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                    &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                    <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+                
+            </div>
 
-        <div class="fr drops">
-            <div class="dropdown">
-                <a href="#" title="">Language <i class="icon-angle-down"></i></a>
-                <div class="trancelate">
-                    <ul id="langs">
-                        <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
-                    </ul>
+            <div class="fr drops">
+                <div class="dropdown">
+                    <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                    <div class="trancelate">
+                        <ul id="langs">
+                            <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--top end-->
-
     <!--top end-->
     <div class="nav">
         <div class="content">
@@ -57,261 +50,253 @@
             </ul>
         </div>
     </div>
-    <!--header end-->
+
     <div class="page">
-        
- <div class="my-bgwhite">
-    <div class="div-bg pr-edit" id="div_pr">
-        <div>
-            <label id="title">
-                修改价格：</label>
-            <select id="selYunS">
-                <option value="=">不使用公式</option>
-                <option value="+">加</option>
-                <option value="-">减</option>
-                <option value="*">乘</option>
-                <option value="/">除</option>
-            </select>
-            <input type="text" class="text20" id="updatePriceInventory" onchange="txtHelper.positiveInteger(this)" onkeyup="txtHelper.positiveInteger(this)" maxlength="10"/>
-        </div>
-        <div class="tc pt10">
-            <button class="sub btn btn-corOrange" onclick="updatePriceInventory();">
-                应用
-            </button>
-            <button class="sub btn btn-corGrey" onclick="$('#div_pr').hide();">
-                取消
-            </button>
-        </div>
-    </div>
-    <div class="div-bg pr-edit" id="div_timeId" style="height: 220px;">
-        <input name="ctl00$ContentPlaceHolder$timeIdJoin" type="hidden" id="timeIdJoin" />
-        <div id="addActivity">
-            <label>
-                参加活动：</label>
-            <select id="timeIdSelect">
-                <option value="timeId0" selected="selected">提交前X件参加活动</option>
-                <option value="timeId1">提交选中商品参加活动</option>
-            </select><br />
-            <div id="div_timeIdTop">参与X数量：<input type="text" class="text20" id="timeIdTop" /></div>
-        </div>
-        <div id="verifyRemarActivity" style="display: none; max-height: 75px; height: 75px; overflow-y: scroll;">
-        </div>
-        <div class="pt10 hide">
-            活动折扣：<input type="text" class="text20" id="discount" style="width: 40px;" /><span class="red">（1-10小数）</span>
-        </div>
-        <div class="pt10">
-            显示名称：<input type="text" class="text20" id="showName" />
-        </div>
-        <div class="pt10">
-            活动标签：<input type="text" class="text20" id="tag" /><span class="red">(多个,分开)</span>
-        </div>
-        <div class="tc pt10">
-            <button class="sub btn btn-corOrange" id="sub" onclick="subTimeId();">
-                提交
-            </button>
-            <button class="sub btn btn-corGrey" onclick="$('#div_timeId').hide();">
-                取消
-            </button>
-        </div>
-    </div>
-
-    <div class="div-bg pr-edit" id="div_shopDepotAddressIdList" style="height: 220px; width: 510px">
-
-        <div class="pt10">
-            <div class="shop-cat-list">
-                <ul id="ulShopDepotAddressIdList">
-                </ul>
+        <div class="my-bgwhite">
+            <div class="div-bg pr-edit" id="div_pr">
+                <div>
+                    <label id="title">
+                        修改价格：</label>
+                    <select id="selYunS">
+                        <option value="=">不使用公式</option>
+                        <option value="+">加</option>
+                        <option value="-">减</option>
+                        <option value="*">乘</option>
+                        <option value="/">除</option>
+                    </select>
+                    <input type="text" class="text20" id="updatePriceInventory" onchange="txtHelper.positiveInteger(this)" onkeyup="txtHelper.positiveInteger(this)" maxlength="10"/>
+                </div>
+                <div class="tc pt10">
+                    <button class="sub btn btn-corOrange" onclick="updatePriceInventory();">
+                        应用
+                    </button>
+                    <button class="sub btn btn-corGrey" onclick="$('#div_pr').hide();">
+                        取消
+                    </button>
+                </div>
             </div>
-        </div>
+            <div class="div-bg pr-edit" id="div_timeId" style="height: 220px;">
+                <input name="ctl00$ContentPlaceHolder$timeIdJoin" type="hidden" id="timeIdJoin" />
+                <div id="addActivity">
+                    <label>
+                        参加活动：</label>
+                    <select id="timeIdSelect">
+                        <option value="timeId0" selected="selected">提交前X件参加活动</option>
+                        <option value="timeId1">提交选中商品参加活动</option>
+                    </select><br />
+                    <div id="div_timeIdTop">参与X数量：<input type="text" class="text20" id="timeIdTop" /></div>
+                </div>
+                <div id="verifyRemarActivity" style="display: none; max-height: 75px; height: 75px; overflow-y: scroll;">
+                </div>
+                <div class="pt10 hide">
+                    活动折扣：<input type="text" class="text20" id="discount" style="width: 40px;" /><span class="red">（1-10小数）</span>
+                </div>
+                <div class="pt10">
+                    显示名称：<input type="text" class="text20" id="showName" />
+                </div>
+                <div class="pt10">
+                    活动标签：<input type="text" class="text20" id="tag" /><span class="red">(多个,分开)</span>
+                </div>
+                <div class="tc pt10">
+                    <button class="sub btn btn-corOrange" id="sub" onclick="subTimeId();">
+                        提交
+                    </button>
+                    <button class="sub btn btn-corGrey" onclick="$('#div_timeId').hide();">
+                        取消
+                    </button>
+                </div>
+            </div>
 
-        <div class="tc pt10">
-            <button class="sub btn btn-corOrange" onclick="subShopDepotAddressIdList();">
-                提交
-            </button>
-            <button class="sub btn btn-corGrey" onclick="$('#div_shopDepotAddressIdList').hide();">
-                取消
-            </button>
-        </div>
-    </div>
+            <div class="div-bg pr-edit" id="div_shopDepotAddressIdList" style="height: 220px; width: 510px">
 
-    <div class="div-bg categories-edit" id="cate_edit">
-        <div class="navbar">
-            <a href="javascript:void(0);" class="close" onclick="closeType();">X </a>
-            <ul class="nav-list">
-                <li class="menuitem menu-open">
-                    <ul class="cat-menu">
-                        
-                    </ul>
-                </li>
-            </ul>
-            <button class="sub btn btn-corOrange" id="cate_yy" onclick="updateType();">
-                应用
-            </button>
-        </div>
-    </div>
-    <div class="actions">
-        <form class="filter-form" name="filter" id="filter" action="ProductManager.aspx">
-            <input name="TimeId" type="hidden" />
-            <label>
-                商品名称：
-            </label>
-            <input type="text" value="" maxlength="20" name="productName" class="text20" />
-            <label>
-                创建日期：
-            </label>
-            <input type="text" value="" id="txtStartDate" name="minCreateTime" class="Wdate"
-                onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}'})" />
-            -
-        <input type="text" value="" name="maxCreateTime" class="Wdate" id="txtEndDate"
-            onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d'})" />
-            <label>
-                价格：
-            </label>
-            <input type="text" value=""
-                name="minPrices" class="text20" style="width: 50px;" maxlength="6" onchange="txtHelper.Float2(this)" onkeyup="txtHelper.Float2(this)" />
-            -
-        <input type="text" value=""
-            name="maxPrices" class="text20" style="width: 50px;" maxlength="6" onchange="txtHelper.Float2(this)" onkeyup="txtHelper.Float2(this)" />
-            <input type="hidden" value="" name="cid" />
-            <label>
-                状态：
-            </label>
-            <select name="productStatus" id="productStatus">
-                <option value="-1">全部</option>
-                
-                        <option value="0">
-                            未上架</option>
-                    
-                        <option value="1">
-                            出售中</option>
-                    
-                        <option value="2">
-                            下架</option>
-                    
-                        <option value="3">
-                            已删除</option>
-                    
-            </select>
-            <input type="submit" value="搜索" class="btn btn-ts btn-corRed" />
-            
-        </form>
-    </div>
-    <div class="upload-small">
-        <div class="navbar">
-            <ul id="J_navlist" class="nav-list">
-                <li class="menuitem menu-open"><a href="javascript:void(0);" class="menu-name"><i
-                    class="arrow"></i>商品分类</a>
-                    <ul class="cat-menu">
-                        <li class="cat-menuitem" id="Li1">
-                            <div class="sub-menu-name" id="cid_none">
-                                <a href="ProductManager.html?cid=none&TimeId=0">未分类商品</a>
-                            </div>
+                <div class="pt10">
+                    <div class="shop-cat-list">
+                        <ul id="ulShopDepotAddressIdList">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tc pt10">
+                    <button class="sub btn btn-corOrange" onclick="subShopDepotAddressIdList();">
+                        提交
+                    </button>
+                    <button class="sub btn btn-corGrey" onclick="$('#div_shopDepotAddressIdList').hide();">
+                        取消
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-bg categories-edit" id="cate_edit">
+                <div class="navbar">
+                    <a href="javascript:void(0);" class="close" onclick="closeType();">X </a>
+                    <ul class="nav-list">
+                        <li class="menuitem menu-open">
+                            <ul class="cat-menu">
+                                
+                            </ul>
                         </li>
-                        <li class="cat-menuitem">
-                            <div class="sub-menu-name" id="cid_null">
-                                <a href="ProductManager.html?TimeId=0">所有分类</a>
-                            </div>
-                        </li>
-                        
                     </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="upload-big">
-        <div class="opt">
-            <div class="cmd">
-                <input type="checkbox" id="all" />
-                <label for="all">
-                    全选</label>
-                
-                
-                <button type="button" class="btn btn-min btn-corYellow" id="edit_inventory">
-                    批量更新库存
-                </button>
-                <button type="button" class="btn btn-min btn-corYellow" onclick="openFreigth();">
-                    设置运费</button>
-                <button type="button" class="btn btn-min btn-corYellow" name="a_cate_edit" cid="-1">
-                    批量更新分类</button>
-                <button type="button" class="btn btn-min btn-corYellow" onclick="updateStatus(this,2)">
-                    批量下架</button>
-                <button type="button" class="btn btn-min btn-corYellow" onclick="updateStatus(this,1)">
-                    批量上架</button>
-                
-                <button type="button" class="btn btn-min btn-corYellow" onclick="updateStatus(this,3)">
-                    批量删除</button>
-                
+                    <button class="sub btn btn-corOrange" id="cate_yy" onclick="updateType();">
+                        应用
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="list-box">
-            <div class="list" id="list">
-                <table style="width: 100%">
-                    <colgroup>
-                        <col width="38%">
-                        <col width="8%">
-                        <col width="8%">
-                        <col width="20%">
-                        <col width="10%">
-                        <col width="8%">
-                        <col width="8%">
-                    </colgroup>
-                    <thead>
-                        <tr class="item-info">
-                            <th>商品名称
-                            </th>
-                            <th>价格
-                            </th>
-                            <th>库存总数
-                            </th>
-                            <th>所属分类
-                            </th>
-                            <th>创建时间
-                            </th>
-                            <th>状态
-                            </th>
-                            <th>操作
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-                <table style="width: 100%">
-                    <colgroup>
-                        <col width="38%">
-                        <col width="8%">
-                        <col width="8%">
-                        <col width="20%">
-                        <col width="10%">
-                        <col width="8%">
-                        <col width="8%">
-                    </colgroup>
-                    <tbody class="item-list">
+            <div class="actions">
+                <form class="filter-form" name="filter" id="filter" action="ProductManager.aspx">
+                    <input name="TimeId" type="hidden" />
+                    <label>
+                        商品名称：
+                    </label>
+                    <input type="text" value="" maxlength="20" name="productName" class="text20" />
+                    <label>
+                        创建日期：
+                    </label>
+                    <input type="text" value="" id="txtStartDate" name="minCreateTime" class="Wdate"
+                        onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}'})" />
+                    -
+                <input type="text" value="" name="maxCreateTime" class="Wdate" id="txtEndDate"
+                    onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d'})" />
+                    <label>
+                        价格：
+                    </label>
+                    <input type="text" value=""
+                        name="minPrices" class="text20" style="width: 50px;" maxlength="6" onchange="txtHelper.Float2(this)" onkeyup="txtHelper.Float2(this)" />
+                    -
+                <input type="text" value=""
+                    name="maxPrices" class="text20" style="width: 50px;" maxlength="6" onchange="txtHelper.Float2(this)" onkeyup="txtHelper.Float2(this)" />
+                    <input type="hidden" value="" name="cid" />
+                    <label>
+                        状态：
+                    </label>
+                    <select name="productStatus" id="productStatus">
+                        <option value="-1">全部</option>
                         
-                        <tr style='display: ' class="li-none">
-                            <td colspan="7">没有搜索到任何结果
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <option value="0">
+                                    未上架</option>
+                            
+                                <option value="1">
+                                    出售中</option>
+                            
+                                <option value="2">
+                                    下架</option>
+                            
+                                <option value="3">
+                                    已删除</option>
+                            
+                    </select>
+                    <input type="submit" value="搜索" class="btn btn-ts btn-corRed" />
+                    
+                </form>
             </div>
-            <div id="ContentPlaceHolder_Panel1" class="digg">
-	
-            
-</div>
+            <div class="upload-small">
+                <div class="navbar">
+                    <ul id="J_navlist" class="nav-list">
+                        <li class="menuitem menu-open"><a href="javascript:void(0);" class="menu-name"><i
+                            class="arrow"></i>商品分类</a>
+                            <ul class="cat-menu">
+                                <li class="cat-menuitem" id="Li1">
+                                    <div class="sub-menu-name" id="cid_none">
+                                        <a href="ProductManager.html?cid=none&TimeId=0">未分类商品</a>
+                                    </div>
+                                </li>
+                                <li class="cat-menuitem">
+                                    <div class="sub-menu-name" id="cid_null">
+                                        <a href="ProductManager.html?TimeId=0">所有分类</a>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="upload-big">
+                <div class="opt">
+                    <div class="cmd">
+                        <input type="checkbox" id="all" />
+                        <label for="all">
+                            全选</label>
+                        
+                        <button type="button" class="btn btn-min btn-corYellow" id="edit_inventory">
+                            批量更新库存
+                        </button>
+                        <button type="button" class="btn btn-min btn-corYellow" onclick="openFreigth();">
+                            设置运费</button>
+                        <button type="button" class="btn btn-min btn-corYellow" name="a_cate_edit" cid="-1">
+                            批量更新分类</button>
+                        <button type="button" class="btn btn-min btn-corYellow" onclick="updateStatus(this,2)">
+                            批量下架</button>
+                        <button type="button" class="btn btn-min btn-corYellow" onclick="updateStatus(this,1)">
+                            批量上架</button>
+                        
+                        <button type="button" class="btn btn-min btn-corYellow" onclick="updateStatus(this,3)">
+                            批量删除</button>
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="list" id="list">
+                        <table style="width: 100%">
+                            <colgroup>
+                                <col width="38%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="20%">
+                                <col width="10%">
+                                <col width="8%">
+                                <col width="8%">
+                            </colgroup>
+                            <thead>
+                                <tr class="item-info">
+                                    <th>商品名称
+                                    </th>
+                                    <th>价格
+                                    </th>
+                                    <th>库存总数
+                                    </th>
+                                    <th>所属分类
+                                    </th>
+                                    <th>创建时间
+                                    </th>
+                                    <th>状态
+                                    </th>
+                                    <th>操作
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <table style="width: 100%">
+                            <colgroup>
+                                <col width="38%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="20%">
+                                <col width="10%">
+                                <col width="8%">
+                                <col width="8%">
+                            </colgroup>
+                            <tbody class="item-list">
+                                
+                                <tr style='display: ' class="li-none">
+                                    <td colspan="7">没有搜索到任何结果
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="ContentPlaceHolder_Panel1" class="digg"></div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div id="ContentPlaceHolder_pnPage" class="digg"></div>
+            </div>
         </div>
     </div>
-    <div class="content">
-        <div id="ContentPlaceHolder_pnPage" class="digg">
-	
         
-</div>
-    </div>
-</div>
-
-    </div>
-    
- <div class="bottom">
+    <div class="bottom">
         <div class="content">
             <div class="bottominfo">
                 善宝分享商城
@@ -320,20 +305,18 @@
             </div>
         </div>
     </div>
-
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/jquery.cookie.js?v=04"></script>
-<script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/trancelate.js?v=04"></script>
 </body>
- 
- <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/layer/layer/layer.min.js?v=04"></script>
- <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/Common.js?v=04"></script>
-
-    
-    <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/jquery.pagination.js?v=04"></script>
-    <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/My97DatePicker/WdatePicker.js?v=04"></script>
-    <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/ZeroClipboard/ZeroClipboard.js?v=04"></script>
-    <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/jquery.form.min.js?v=04"></script>
-    <script type="text/javascript" src="http://misc.wdj360.com/member/default/Js/Product/ProductManager.js?v=04"></script>
-
-<script>    setSelectNav("ul.nav");</script>
+<script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+<script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+<script type="text/javascript" src="../lib/Common.js"></script>
+<script type="text/javascript" src="../lib/jquery.pagination.js"></script>
+<script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../lib/jquery.form.min.js"></script>
+<script type="text/javascript" src="../js/ZeroClipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="../js/Product/ProductManager.js"></script>
+<script>    
+    setSelectNav("ul.nav");
+</script>
 </html>

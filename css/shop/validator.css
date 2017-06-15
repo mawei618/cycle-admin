@@ -1,0 +1,69 @@
+.onShow
+{
+    background: url(../images/onShow.gif) no-repeat -0px center #F7F7F7;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    line-height:26px;
+    height:26px;
+    vertical-align: middle;
+    position: absolute;
+    border: 1px solid #DDDDDD;
+    display: none;
+	margin-left:5px;
+}
+.onFocus
+{
+    border: 1px solid #DDDDDD;
+    background: url(../images/onFocus.gif) no-repeat -0px center #F7F7F7;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    line-height:26px;
+    height: 26px;
+    vertical-align: middle;
+    position: absolute;
+	margin-left:5px;
+}
+.onError
+{
+    border: 1px solid #FFBDBE;
+    background: url(../images/onError.gif) no-repeat -0px center #FFEBEB;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    line-height:26px;
+    height:26px;
+    color: #FF0000;
+    position: absolute;
+    vertical-align: middle;
+	margin-left:5px;
+}
+.onCorrect
+{
+    border: 1px solid #DDDDDD;
+    background: url(../images/onCorrect.gif) no-repeat -0px center #F7F7F7;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    line-height:26px;
+    height:26px;
+    vertical-align: middle;
+    position: absolute;
+	margin-left:5px;
+}
+.onLoad
+{
+    border: 1px solid #DDDDDD;
+    background: url(../images/onLoad.gif) no-repeat -0px center #F7F7F7;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    line-height: 26px;
+    height: 26px;
+    vertical-align: middle;
+    position: absolute;
+	margin-left:5px;
+}
+#phoneNumber_telephoneNumberTip{margin:5px 0 0 0;}
+#isDefault{vertical-align: middle;}

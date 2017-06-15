@@ -1,0 +1,89 @@
+/* File Created: 十一月 21, 2013 */
+
+.bd
+{
+    font-size: 14px;
+    margin: 20px 0 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+    width: 680px;
+}
+.right-box1 h3
+{
+    border-bottom: 1px solid #5D983C;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+b
+{
+    color: #0579C6;
+    font-weight: 100;
+}
+.space
+{
+    margin: 5px 0 0 50px;
+}
+.t1
+{
+    font-size: 16px;
+}
+.upload-big
+{
+    width: 680px;
+}
+.upload-small
+{
+    width: 490px;
+}
+.progress
+{
+    background: repeat scroll 0 0 #53D4DA;
+    border-radius: 17px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.8) inset, 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 6px #86AAE0, 0 7px rgba(255, 255, 255, 0.1);
+    height: 34px;
+    margin: 50px auto;
+    margin-left: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 0 15px;
+    width: 600px;
+}
+.progress-val
+{
+    color: #D80404;
+    float: right;
+    font: bold 15px/34px Helvetica,Arial,sans-serif;
+    margin-left: 15px;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+}
+.progress-bar
+{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%) repeat scroll 0 0 #B8B8B8;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 1px rgba(255, 255, 255, 0.6);
+    display: block;
+    height: 8px;
+    margin: 13px 0;
+    overflow: hidden;
+}
+.progress-in
+{
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #1997E6;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.2)), linear-gradient(to right, #147CD6, #24C1FC);
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-radius: 4px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2) inset, 0 0 0 1px rgba(0, 0, 0, 0.2) inset;
+    display: block;
+    height: 8px;
+    min-width: 8px;
+}
+
+.up-tit{line-height:30px;border-bottom:1px dotted #ddd;color:#333;font-size:16px;font-family:"Microsoft Yahei"}
+.up-contBox{padding:15px;font-size:12px;color:#666}
+.up-contBox b{color:#ff5500}

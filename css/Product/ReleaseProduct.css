@@ -1,0 +1,377 @@
+*:focus {outline: none;} 
+.productList{ display:none;}
+.category-search
+{
+    background-color: #fee6e6;
+    padding: 20px 0px 28px 300px;
+    color:#333;
+}
+
+
+.category-search .searchbox
+{
+    line-height: 200%;
+    margin-left: 0;
+    position: relative;
+}
+.category-search .searchbox .caption
+{
+    height: 30px;
+    line-height: 30px;
+     
+}
+.category-search .searchbox .search-keyword
+{
+    border: 2px none;
+    height: 29px;
+    line-height: 29px;
+    padding: 2px 5px 3px;
+    vertical-align: middle;
+    width: 300px;
+    color:#CCCCCC;
+}
+.category-search .searchbox .search-keyword:focus{
+    outline:1px solid #fbabab;
+}
+.category-search .searchbox .search-hint
+{
+    display: inline;
+    height: 35px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 300px;
+}
+
+
+.cate-aside .caption{ display:none;}
+
+.catlist
+{
+    height: 340px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+.rollcont
+{
+    background-color: #fbabac;
+    border-radius:5px;
+    padding:10px;
+    position: relative;
+    height: 340px;
+}
+.cat_container
+{
+    background-color: #fed5d5;
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    float: left;
+    margin-right: 10px;
+    padding: 10px 0 0 10px;
+}
+.mylist
+{
+    height: 310px;
+    position: absolute;
+    width: 800px;
+}
+.mylist li
+{
+    background-color: #FFFFFF;
+    float: left;
+    max-height: 300px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    padding: 4px;
+    width: 182px;
+}
+.mylist .item
+{
+    width: 250px;
+}
+
+.mylist li input
+{
+    background: url("../../images/product/search_1.gif") no-repeat scroll left center;
+    color: #CCCCCC;
+    padding-left: 16px;
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 5px;
+    width: 210px;
+}
+.item .search
+{
+    background-color: #F8F7F7;
+    position: absolute;
+}
+.mylist .item .list
+{
+    padding-top: 35px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 280px;
+}
+
+.mylist ul
+{
+    height: auto;
+}
+.mylist ul .select{
+   /* border: 1px dotted #82BCE0; */
+   background: url("../../images/product/list.gif") no-repeat scroll 220px center #ee9090;
+}
+
+.mylist ul li
+{
+    background: url("../../images/product/list.gif") no-repeat scroll 220px center #fee6e6;
+    float: none;
+    height: 20px;
+    margin: 3px 0;
+    overflow: hidden;
+    width: 220px;
+    padding-right: 10px;
+}
+
+ 
+.mylist ul li:hover
+{
+    cursor: pointer;
+}
+
+.cate-aside
+{
+    background-color: #FFFFFF;
+    height: 315px;
+    width: 300px;
+    overflow: hidden;
+    padding: 5px 15px 0 25px;
+    position: relative;
+}
+
+.cate-aside .caption
+{
+    color: #808080;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cate-aside .guid-wrap .hint-content {
+    margin: 70px auto 0;
+    text-align: center;
+    width: 110px;
+    color:#808080;
+}
+ 
+.cate-aside .guid-wrap .figure {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    bottom: 10px;
+    height: 126px;
+    opacity: 0.25;
+    position: absolute;
+    right: 10px;
+    width: 110px;
+}
+.cate-aside .loaded
+{
+    background-image: none;
+}
+.cate-aside .preview
+{
+    background: url("../../images/load.gif") no-repeat scroll center center #FFFFFF;
+    border: 1px solid #ECECEC;
+    display: inline-block;
+    height: 70px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    padding: 1px;
+    width: 70px;
+    float: left;
+}
+.cate-aside .preview .wrap
+{
+    display: table-cell;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 70px;
+}
+.cate-aside .preview img
+{
+    vertical-align: middle;
+}
+
+.cate-path
+{
+    color: #333;
+    line-height: 20px;
+    background-color: #eeeeee;
+    padding:5px 25px;
+    margin:15px 0;
+}
+ 
+.cate-path dt, .cate-path dd
+{
+    float: left;
+}
+.cate-path dt
+{
+    font-weight: 900;
+}
+
+
+
+
+
+.cateBottom
+{
+    padding: 35px 0 24px;
+    text-align: center;
+}
+
+.catePublish
+{
+    margin-right: 28px;
+}
+
+
+.cateBottom .cateBtn-disabled {
+    background-position: 0 0;
+}
+
+.cateBottom .cateBtn-disabled button {
+    background:#c5c5c5;
+    color: #fff;
+    cursor: not-allowed;
+}
+.cateBtn button, .catePublish
+{
+   background:#e74c3c;
+   color:#fff;
+}
+
+.catePublish button
+{
+    width: 250px;
+}
+.cateBtn button
+{
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    border-radius:3px;
+    font-family: Microsoft yahei;
+}
+
+.agreement
+{
+    border: 1px solid #CCCCCC;
+    color: #666;
+    height: 300px;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding:15px;
+}
+
+.agreement .notice
+{
+    border-bottom: 1px dashed #CCCCCC;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+
+.agreement .notice h5
+{
+    display: inline-block;
+}
+.cate-container
+{
+    background-color: #F5F9FF;
+    border: 1px solid #D5E4FA;
+    overflow: hidden;
+    position: relative;
+    height: 315px;
+}
+
+.search-result
+{
+    margin-top: 15px;
+    width: 847px;
+    float: left;
+}
+
+.search-result .result-note
+{
+    height: 26px;
+    line-height: 26px;
+    margin: 0 25px;
+}
+
+.search-result .result-note .RecordCount
+{
+    color: #FF6600;
+    padding-left: 1px;
+    padding-right: 1px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.search-result .result-note a.trigger-exit
+{
+    color: #e45050;
+    margin-left: 50px;
+}
+.search-result .result-note a.trigger-exit:hover{
+    color:#f00;
+}
+.search-result .result-list
+{
+    background-color: #FFFFFF;
+    border: 1px solid #D5E4FA;
+    height: 265px;
+    margin: 0 25px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 4px 0;
+}
+.search-result .result-list ol
+{
+    height: 345px;
+    list-style-type: decimal;
+    padding-top: 14px;
+}
+
+.search-result .result-list ol li
+{
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    margin-right: 10px;
+    padding-top: 2px;
+    text-align: left;
+    width: 750px;
+     
+}
+
+
+.search-result .result-list ol .selected
+{
+    background: none repeat scroll 0 0 #DFF1FB;
+    border-bottom: 1px solid #9CD7FC;
+    border-top: 1px solid #9CD7FC;
+    color: #404040;
+}

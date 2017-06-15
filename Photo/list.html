@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>图片列表</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible" />
+        <link href="../lib/global.css" rel="stylesheet" type="text/css" />
+        <link href="../css/Photo/PicCenter.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../js/Photo/Jquery.js"></script>
+        <link href="../css/Photo/List.css" rel="stylesheet" type="text/css" />
+        <link href="../lib/pagination.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <!--top begin-->
+        
+        <!--top begin-->
+        <div class="top">
+            <div class="content">
+                <div class="fl my-headLogo">
+                    <a href="/Shop/MyAccount.html">
+                        <img src="http://misc.wdj360.com/Member/default/images/logo.png" />
+                    </a>
+                </div>
+                <div class="fl my-headTopNav"><a href="/index.html" title="返回首页">首页</a><a href="/Shop/insideletter.html" title="消息中心">消息中心</a></div>
+                <div class="my-headTopInfor">
+                    <span>您好！&nbsp;<span id="MainTop_lblUserCode">15238203791</span>
+                        &nbsp;欢迎来到&nbsp;<a href="/" title="">善宝分享商城</a>&nbsp;</span>
+                        <a class="my-headOut" href="../LoginOut.html" title="">登出</a>
+                </div>
+        
+                <div class="fr drops">
+                    <div class="dropdown">
+                        <a href="#" title="">Language <i class="icon-angle-down"></i></a>
+                        <div class="trancelate">
+                            <ul id="langs">
+                                <span id="translateLoading"><img src="http://misc.wdj360.com/member/default/images/loading.gif"><p>Loading...</p></span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--top end-->
+        
+            <!--top end-->
+            <div class="nav">
+                <div class="content">
+                    <h1 class="clearfix" id="logo">
+                        <span class="mlogo"><a target="_top" title="#" href="/index.html"><s></s></a></span>
+                    </h1>
+                    <ul class="nav">
+                        <li><a href="index.html" title="首 页">首 页</a></li>
+                        <li><a href="list.html" title="图片管理">图片管理</a></li>
+                        <li><a href="Upload.html" title="上传图片">上传图片</a></li>
+                        <li><a href="Category.html" title="">图片分类</a></li>
+                        <li><a href="Recycle.html" title="">回收站</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--header end-->
+            <div class="page">
+                
+            <div class="my-bgwhite">
+            <div class="actions">
+                <form class="filter-form" name="filter" id="filter">
+                    <label>名称：</label>
+                    <input type="text" value="" maxlength="10" name="oldImageName" class="text20" />
+                    <label>上传日期：</label>
+                    <input type="text" value="" name="startDate" class="Wdate" id="txtStartDate"  onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'txtEndDate\')||\'%y-%M-%d\'}'})" /> -
+                    <input type="text" value="" name="endDate" class="Wdate" id="txtEndDate" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'txtStartDate\')}',maxDate:'%y-%M-%d'})" />
+                    <input type="hidden" value="0" name="cid" />
+                    <input type="submit" value="搜索" class="btn btn-ts btn-corRed" />
+                </form>
+            </div>
+            <div class="upload-small">
+                <div class="navbar">
+                    <ul id="J_navlist" class="nav-list">
+                        <li class="menuitem menu-open">
+                            <a href="javascript:void(0);" class="menu-name"><i class="arrow"></i>图片分类</a>
+                            <ul class="cat-menu">
+                                <li class="cat-menuitem" id="cid_0">
+                                    <div class="sub-menu-name">
+                                        <a href="List.html">所有分类</a>
+                                    </div>
+                                </li>
+                                <li class="cat-menuitem" id="cid_3380">
+                                    <div class="sub-menu-name">
+                                         <a href="List.html?cid=3380">默认分类</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="upload-big">
+                <div class="opt" style="margin-left: 15px">
+                    <div class="cmd">
+                        <input type="checkbox" id="all" />
+                        <label for="all">全选</label>
+                        <input type="button" value="批量删除" onclick="delAll();" class="btn btn-min btn-corYellow" />
+                        <input type="button" value="批量移动分类" onclick="moveShow();" class="btn btn-min btn-corYellow" />
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="list" id="list">
+                        <ul class="list-item">
+                            <li class="thumb-box">
+                                <a class="thumb"><img id="44047_2937" alt="comlicence" src="http://img.wdj360.com/upload/shop/1409/0/2017/03/22/153421537.jpg_220x220.jpg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="thumb-name">comlicence</div>
+                                <div class="copy-box" name="http://img.wdj360.com/upload/shop/1409/0/2017/03/22/153421537.jpg">
+                                    <b>复制</b> <b class="copy-code-box"><a class="copy-btn" href="javascript:void(0);">代码</a></b>
+                                    <b class="copy-link-box"><a class="copy-btn" href="javascript:void(0);">链接</a> </b>
+                                </div>
+                                <div class="edit-box">
+                                    <a href="javascript:void(0);" onclick="moveShow(this);">移动分类</a>
+                                    <a href="javascript:void(0);" onclick="del(44047)">删除</a>&nbsp;
+                                    <input value="44047" type="checkbox" name="img" />
+                                </div>
+                            </li>
+                            <li class="thumb-box"><a class="thumb">
+                                <img id="44046_2937" alt="comlicence" src="http://img.wdj360.com/upload/shop/1409/0/2017/03/22/153353428.jpg_220x220.jpg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="thumb-name">comlicence</div>
+                                <div class="copy-box" name="http://img.wdj360.com/upload/shop/1409/0/2017/03/22/153353428.jpg">
+                                    <b>复制</b> <b class="copy-code-box"><a class="copy-btn" href="javascript:void(0);">代码</a></b>
+                                    <b class="copy-link-box"><a class="copy-btn" href="javascript:void(0);">链接</a> </b>
+                                </div>
+                                <div class="edit-box">
+                                    <a href="javascript:void(0);" onclick="moveShow(this);">移动分类</a>
+                                    <a href="javascript:void(0);" onclick="del(44046)">删除</a>&nbsp;
+                                    <input value="44046" type="checkbox" name="img" />
+                                </div>
+                            </li>
+                            <li style='display: none' class="li-none">没有搜索到任何结果</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div id="ContentPlaceHolder_pnPage" class="digg">
+        	       <script type="text/javascript" language="javascript"> $(function () {page("ContentPlaceHolder_pnPage", 2, 20, 0); });</script>
+                </div>
+            </div>
+            <div id="repImg" class=" hide pt20 pl20">
+                <form id="formRepace" action="Handler/Photo.ashx" method="post">
+                    <p class="mb5">
+                        <input type="file" name="Filedata" />
+                        <input type="hidden" name="cid" value="0" />
+                        <input type="hidden" name="id" value="0" />
+                        <input type="hidden" name="action" value="addPic" />
+                    </p>
+                    <p>
+                        <input type="submit" value="确定" class="btn btn-min btn-corOrange" />
+                        <input type="button" onclick="closeRep()" value="取消" class="btn btn-min btn-corGrey" />
+                    </p>
+                </form>
+            </div>
+        
+            <div id="moveImg" class="hide pt20 pl20">
+                <p class="mb5">
+                    <select id="selCateMove">
+                        <option value="3380">默认分类</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="button" value="确定" class="btn btn-min btn-corOrange" onclick="move()" />
+                    <input type="button" onclick="closeMove()" value="取消" class="btn btn-min btn-corGrey" />
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="bottom">
+            <div class="content">
+                <div class="bottominfo">善宝分享商城&nbsp;&nbsp;&nbsp;&nbsp;版权所有2015&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备16008055号</div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../lib/jquery.cookie.js"></script>
+        <script type="text/javascript" src="../lib/layer/trancelate.js"></script>
+    </body>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../lib/Common.js"></script>
+
+    <script type="text/javascript" src="../lib/jquery.pagination.js"></script>
+    <script type="text/javascript" src="../lib/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../js/Photo/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="../lib/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../lib/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../js/Photo/List.js"></script>
+
+<script>    setSelectNav("ul.nav");</script>
+</html>

@@ -1,0 +1,119 @@
+.addressedit-main {
+    width: 975px;
+    margin: auto;
+    color: #333;
+}
+.addressedit-header {
+    padding: 8px 36px;
+    overflow: hidden;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 16px;
+}
+.add-address-main {
+    margin: 33px 0 0 70px;
+}
+.add-address-main .title {
+    font-size: 18px;
+    color: #373737;
+}
+.add-address-from {
+    margin: 23px 0 0 32px;
+    font-size: 14px;
+}
+.add-address-from li {
+    margin-bottom: 16px;
+}
+.add-address-from .address-item-tt {
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    margin-right: 18px;
+}
+.add-address-from .sele {
+    width: 120px;
+    margin-right: 10px;
+    height: 38px;
+    line-height: 39px;
+    border-radius: 0;
+}
+.add-address-item .input {
+    width: 510px;  
+    border-radius: 0;
+    padding: 8px 0 8px 10px;        
+}
+.add-address-item .ipt {
+    width: 315px;
+}
+.add-address-item .iptarea {
+    width: 59px;
+}
+.add-address-item .ipttel {
+    width: 103px;
+}
+.add-address-setbox {
+    padding-left: 118px;
+}
+.setDefaultAdr {
+    vertical-align: -2px;
+}
+.add-address-btn {
+    padding: 0 62px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0 0 118px;
+}
+.address-list {
+    margin-top: 22px;
+}
+.address-table {
+    margin: 22px 36px;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+    font-size: 14px;
+}
+.address-table th {
+    background: #f4f4f4;
+    height: 44px;
+    font-size: 16px;
+}
+.address-table th,.address-table td {
+    border-bottom: 1px solid #e6e6e6;
+}
+.address-table td {
+    padding: 14px 0;
+    text-align: center;
+}
+.address-table .td-addr {
+    width: 40%;
+}
+.address-table .td-check-icon {
+    display: inline-block;
+    width: 23px;
+    height: 22px;
+}
+.address-table .td-people, .address-table .td-tel, .address-table .td-other {
+    width: 20%;
+}
+.address-table td.td-addr {
+    text-align: left;
+    padding: 10px 20px;
+}
+.address-table .td-addr-tt {
+    display: inline-block;
+    padding: 0 0 0 18px;
+    width: 270px;
+    vertical-align: middle;
+    line-height: 18px;
+}
+.address-table .td-other a {
+    color: #e45050;
+    margin: 0 5px;
+}
+.address-table .td-other-tt {
+    margin: 0 5px;
+}
+.address-table .td-other a:hover {
+    text-decoration: underline;
+}
